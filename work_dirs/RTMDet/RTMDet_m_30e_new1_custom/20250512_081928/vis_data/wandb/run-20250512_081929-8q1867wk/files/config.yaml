@@ -1,0 +1,600 @@
+_wandb:
+    value:
+        cli_version: 0.19.9
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 37
+                - 38
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 82
+            "2":
+                - 1
+                - 5
+                - 11
+                - 37
+                - 38
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 82
+            "3":
+                - 13
+                - 23
+                - 55
+            "4": 3.11.11
+            "5": 0.19.9
+            "6": 4.51.2
+            "8":
+                - 5
+            "12": 0.19.9
+            "13": linux-x86_64
+HOME:
+    value: /home/jaa/Work/Prog/BSU/Detectors
+MODEL_GROUP:
+    value: yolo-like
+MODEL_TYPE:
+    value: RTMDet
+WEIGHT_SIZE:
+    value: m
+additions:
+    value: new1
+auto_scale_lr:
+    value:
+        base_batch_size: 6
+        enable: false
+backend_args:
+    value: null
+base_lr:
+    value: 0.004
+batch_size:
+    value: 6
+checkpoint_config:
+    value:
+        interval: 1
+custom_hooks:
+    value:
+        - type: CustomFreezeHook
+          unfreeze_epoch: 5
+custom_imports:
+    value:
+        allow_failed_imports: false
+        imports:
+            - custom_hooks
+data_root:
+    value: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+dataset_type:
+    value: CocoDataset
+default_hooks:
+    value:
+        checkpoint:
+            interval: 1
+            max_keep_ckpts: 3
+            type: CheckpointHook
+        early_stopping:
+            min_delta: 0.001
+            monitor: coco/bbox_mAP
+            patience: 3
+            type: EarlyStoppingHook
+        logger:
+            interval: 50
+            log_metric_by_epoch: true
+            type: LoggerHook
+        param_scheduler:
+            type: ParamSchedulerHook
+        sampler_seed:
+            type: DistSamplerSeedHook
+        timer:
+            type: IterTimerHook
+        visualization:
+            type: DetVisualizationHook
+default_scope:
+    value: mmdet
+deterministic:
+    value: true
+env_cfg:
+    value:
+        cudnn_benchmark: false
+        dist_cfg:
+            backend: nccl
+        mp_cfg:
+            mp_start_method: fork
+            opencv_num_threads: 0
+evaluation:
+    value:
+        interval: 1
+        metric: bbox
+experiment:
+    value: RTMDet_m_30e_new1_custom
+img_scales:
+    value:
+        - - 640
+          - 640
+        - - 320
+          - 320
+        - - 960
+          - 960
+interval:
+    value: 10
+launcher:
+    value: none
+load_from:
+    value: /home/jaa/Work/Prog/BSU/Detectors/models/RTMDet/rtmdet_m_8xb32-300e_coco_20220719_112220-229f527c.pth
+log_level:
+    value: INFO
+log_processor:
+    value:
+        by_epoch: true
+        type: LogProcessor
+        window_size: 50
+max_epochs:
+    value: 300
+metainfo:
+    value:
+        classes:
+            - cow
+        palette:
+            - - 220
+              - 20
+              - 60
+model:
+    value:
+        backbone:
+            act_cfg:
+                inplace: true
+                type: SiLU
+            arch: P5
+            channel_attention: true
+            deepen_factor: 0.67
+            expand_ratio: 0.5
+            norm_cfg:
+                type: SyncBN
+            type: CSPNeXt
+            widen_factor: 0.75
+        bbox_head:
+            act_cfg:
+                inplace: true
+                type: SiLU
+            anchor_generator:
+                offset: 0
+                strides:
+                    - 8
+                    - 16
+                    - 32
+                type: MlvlPointGenerator
+            bbox_coder:
+                type: DistancePointBBoxCoder
+            exp_on_reg: true
+            feat_channels: 192
+            in_channels: 192
+            loss_bbox:
+                loss_weight: 2
+                type: GIoULoss
+            loss_cls:
+                beta: 2
+                loss_weight: 1
+                type: QualityFocalLoss
+                use_sigmoid: true
+            norm_cfg:
+                type: SyncBN
+            num_classes: 1
+            pred_kernel_size: 1
+            share_conv: true
+            stacked_convs: 2
+            type: RTMDetSepBNHead
+            with_objectness: false
+        data_preprocessor:
+            batch_augments: null
+            bgr_to_rgb: false
+            mean:
+                - 103.53
+                - 116.28
+                - 123.675
+            std:
+                - 57.375
+                - 57.12
+                - 58.395
+            type: DetDataPreprocessor
+        neck:
+            act_cfg:
+                inplace: true
+                type: SiLU
+            expand_ratio: 0.5
+            in_channels:
+                - 192
+                - 384
+                - 768
+            norm_cfg:
+                type: SyncBN
+            num_csp_blocks: 2
+            out_channels: 192
+            type: CSPNeXtPAFPN
+        test_cfg:
+            max_per_img: 300
+            min_bbox_size: 0
+            nms:
+                iou_threshold: 0.65
+                type: nms
+            nms_pre: 30000
+            score_thr: 0.001
+        train_cfg:
+            allowed_border: -1
+            assigner:
+                topk: 13
+                type: DynamicSoftLabelAssigner
+            debug: false
+            pos_weight: -1
+        type: RTMDet
+num_classes:
+    value: 1
+num_epochs:
+    value: 30
+num_workers:
+    value: 6
+optim_wrapper:
+    value:
+        optimizer:
+            lr: 0.0025
+            momentum: 0.9
+            type: SGD
+            weight_decay: 0.0005
+        paramwise_cfg:
+            bias_decay_mult: 0
+            bypass_duplicate: true
+            norm_decay_mult: 0
+        type: OptimWrapper
+param_scheduler:
+    value:
+        - begin: 0
+          by_epoch: false
+          end: 500
+          start_factor: 0.001
+          type: LinearLR
+        - begin: 0
+          by_epoch: true
+          end: 12
+          gamma: 0.1
+          milestones:
+            - 7
+            - 14
+          type: MultiStepLR
+        - T_max: 10
+          begin: 0
+          by_epoch: true
+          end: 10
+          type: CosineAnnealingLR
+resume:
+    value: false
+seed:
+    value: 42
+stage2_num_epochs:
+    value: 20
+test_cfg:
+    value:
+        type: TestLoop
+test_dataloader:
+    value:
+        batch_size: 6
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                  type: PackDetInputs
+            test_mode: true
+            type: CocoDataset
+        drop_last: false
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: false
+            type: DefaultSampler
+test_evaluator:
+    value:
+        ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test_coco.json
+        backend_args: null
+        format_only: true
+        metric: bbox
+        outfile_prefix: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test/images
+        proposal_nums:
+            - 100
+            - 1
+            - 10
+        type: CocoMetric
+test_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - keep_empty: false
+          min_gt_bbox_wh:
+            - 16
+            - 16
+          type: FilterAnnotations
+        - keep_ratio: true
+          scale:
+            - 1280
+            - 1280
+          type: Resize
+        - meta_keys:
+            - img_id
+            - img_path
+            - ori_shape
+            - img_shape
+            - scale_factor
+          type: PackDetInputs
+train_cfg:
+    value:
+        dynamic_intervals:
+            - - 280
+              - 1
+        max_epochs: 30
+        type: EpochBasedTrainLoop
+        val_interval: 1
+train_dataloader:
+    value:
+        batch_sampler: null
+        batch_size: 6
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/train_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/train/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            filter_cfg:
+                filter_empty_gt: true
+                min_size: 32
+            metainfo:
+                classes:
+                    - cow
+                palette:
+                    - - 220
+                      - 20
+                      - 60
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - prob: 0.5
+                  type: RandomFlip
+                - level: 2
+                  prob: 0.3
+                  type: Rotate
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - type: PackDetInputs
+            type: CocoDataset
+        num_workers: 6
+        persistent_workers: true
+        pin_memory: true
+        sampler:
+            shuffle: true
+            type: DefaultSampler
+train_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - prob: 0.5
+          type: RandomFlip
+        - level: 2
+          prob: 0.3
+          type: Rotate
+        - keep_empty: false
+          min_gt_bbox_wh:
+            - 16
+            - 16
+          type: FilterAnnotations
+        - keep_ratio: true
+          scale:
+            - 1280
+            - 1280
+          type: Resize
+        - type: PackDetInputs
+train_pipeline_stage2:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - keep_ratio: true
+          ratio_range:
+            - 0.1
+            - 2
+          scale:
+            - 640
+            - 640
+          type: RandomResize
+        - crop_size:
+            - 640
+            - 640
+          type: RandomCrop
+        - type: YOLOXHSVRandomAug
+        - prob: 0.5
+          type: RandomFlip
+        - pad_val:
+            img:
+                - 114
+                - 114
+                - 114
+          size:
+            - 640
+            - 640
+          type: Pad
+        - type: PackDetInputs
+tta_model:
+    value:
+        tta_cfg:
+            max_per_img: 100
+            nms:
+                iou_threshold: 0.6
+                type: nms
+        type: DetTTAModel
+tta_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - transforms:
+            - - keep_ratio: true
+                scale:
+                    - 640
+                    - 640
+                type: Resize
+              - keep_ratio: true
+                scale:
+                    - 320
+                    - 320
+                type: Resize
+              - keep_ratio: true
+                scale:
+                    - 960
+                    - 960
+                type: Resize
+            - - prob: 1
+                type: RandomFlip
+              - prob: 0
+                type: RandomFlip
+            - - pad_val:
+                    img:
+                        - 114
+                        - 114
+                        - 114
+                size:
+                    - 960
+                    - 960
+                type: Pad
+            - - type: LoadAnnotations
+                with_bbox: true
+            - - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                    - flip
+                    - flip_direction
+                type: PackDetInputs
+          type: TestTimeAug
+val_cfg:
+    value:
+        type: ValLoop
+val_dataloader:
+    value:
+        batch_size: 6
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/valid_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/valid/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            metainfo:
+                classes:
+                    - cow
+                palette:
+                    - - 220
+                      - 20
+                      - 60
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                  type: PackDetInputs
+            test_mode: true
+            type: CocoDataset
+        drop_last: false
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: false
+            type: DefaultSampler
+val_evaluator:
+    value:
+        ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch//valid_coco.json
+        backend_args: null
+        format_only: false
+        metric: bbox
+        proposal_nums:
+            - 100
+            - 1
+            - 10
+        type: CocoMetric
+vis_backends:
+    value:
+        - init_kwargs:
+            group: yolo-like
+            name: RTMDet_m_30e_6b_new1
+            project: Сomparison of detectors
+          type: WandbVisBackend
+visualizer:
+    value:
+        type: Visualizer
+        vis_backends:
+            - init_kwargs:
+                group: yolo-like
+                name: RTMDet_m_30e_6b_new1
+                project: Сomparison of detectors
+              type: WandbVisBackend
+weights:
+    value: rtmdet_m_8xb32-300e_coco_20220719_112220-229f527c.pth
+work_dir:
+    value: /home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom/

@@ -1,0 +1,15 @@
+{"time":"2025-05-27T02:05:14.421574534+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/CODETR/CODETR_r50_20e_New_custom/20250527_020508/vis_data/wandb/run-20250527_020514-re6t7rut/logs/debug-core.log"}
+{"time":"2025-05-27T02:05:14.84519078+04:00","level":"INFO","msg":"created new stream","id":"re6t7rut"}
+{"time":"2025-05-27T02:05:14.845223381+04:00","level":"INFO","msg":"stream: started","id":"re6t7rut"}
+{"time":"2025-05-27T02:05:14.845239721+04:00","level":"INFO","msg":"handler: started","stream_id":"re6t7rut"}
+{"time":"2025-05-27T02:05:14.845239661+04:00","level":"INFO","msg":"sender: started","stream_id":"re6t7rut"}
+{"time":"2025-05-27T02:05:14.845270719+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"re6t7rut"}
+{"time":"2025-05-27T02:05:15.153996173+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-27T02:05:45.30741519+04:00","level":"INFO","msg":"stream: closing","id":"re6t7rut"}
+{"time":"2025-05-27T02:05:45.307430678+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-27T02:05:45.307472366+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-27T02:05:46.560268342+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-27T02:05:46.959689683+04:00","level":"INFO","msg":"handler: closed","stream_id":"re6t7rut"}
+{"time":"2025-05-27T02:05:46.959737262+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"re6t7rut"}
+{"time":"2025-05-27T02:05:46.959751609+04:00","level":"INFO","msg":"sender: closed","stream_id":"re6t7rut"}
+{"time":"2025-05-27T02:05:46.959785783+04:00","level":"INFO","msg":"stream: closed","id":"re6t7rut"}

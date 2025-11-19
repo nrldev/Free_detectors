@@ -1,0 +1,15 @@
+{"time":"2025-05-12T08:19:29.923518744+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom/20250512_081928/vis_data/wandb/run-20250512_081929-8q1867wk/logs/debug-core.log"}
+{"time":"2025-05-12T08:19:30.371000443+04:00","level":"INFO","msg":"created new stream","id":"8q1867wk"}
+{"time":"2025-05-12T08:19:30.371030158+04:00","level":"INFO","msg":"stream: started","id":"8q1867wk"}
+{"time":"2025-05-12T08:19:30.371038053+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"8q1867wk"}
+{"time":"2025-05-12T08:19:30.371048833+04:00","level":"INFO","msg":"handler: started","stream_id":"8q1867wk"}
+{"time":"2025-05-12T08:19:30.371072527+04:00","level":"INFO","msg":"sender: started","stream_id":"8q1867wk"}
+{"time":"2025-05-12T08:19:30.689839495+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-12T08:19:39.449248023+04:00","level":"INFO","msg":"stream: closing","id":"8q1867wk"}
+{"time":"2025-05-12T08:19:39.449269793+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-12T08:19:39.449323785+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-12T08:19:40.464654865+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-12T08:19:40.954772954+04:00","level":"INFO","msg":"handler: closed","stream_id":"8q1867wk"}
+{"time":"2025-05-12T08:19:40.954807669+04:00","level":"INFO","msg":"sender: closed","stream_id":"8q1867wk"}
+{"time":"2025-05-12T08:19:40.954804934+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"8q1867wk"}
+{"time":"2025-05-12T08:19:40.954860789+04:00","level":"INFO","msg":"stream: closed","id":"8q1867wk"}

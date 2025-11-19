@@ -1,0 +1,15 @@
+{"time":"2025-05-12T18:18:22.178698925+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom/20250512_181820/vis_data/wandb/run-20250512_181822-bzb3ao75/logs/debug-core.log"}
+{"time":"2025-05-12T18:18:22.583288309+04:00","level":"INFO","msg":"created new stream","id":"bzb3ao75"}
+{"time":"2025-05-12T18:18:22.583328335+04:00","level":"INFO","msg":"stream: started","id":"bzb3ao75"}
+{"time":"2025-05-12T18:18:22.583354253+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"bzb3ao75"}
+{"time":"2025-05-12T18:18:22.583372608+04:00","level":"INFO","msg":"sender: started","stream_id":"bzb3ao75"}
+{"time":"2025-05-12T18:18:22.583373369+04:00","level":"INFO","msg":"handler: started","stream_id":"bzb3ao75"}
+{"time":"2025-05-12T18:18:23.011385547+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-12T18:46:58.336581093+04:00","level":"INFO","msg":"stream: closing","id":"bzb3ao75"}
+{"time":"2025-05-12T18:46:58.336616629+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-12T18:46:58.336666132+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-12T18:46:59.663708365+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-12T18:47:00.024909637+04:00","level":"INFO","msg":"handler: closed","stream_id":"bzb3ao75"}
+{"time":"2025-05-12T18:47:00.024967255+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bzb3ao75"}
+{"time":"2025-05-12T18:47:00.024983986+04:00","level":"INFO","msg":"sender: closed","stream_id":"bzb3ao75"}
+{"time":"2025-05-12T18:47:00.025034551+04:00","level":"INFO","msg":"stream: closed","id":"bzb3ao75"}

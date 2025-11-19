@@ -1,0 +1,16 @@
+{"time":"2025-05-27T02:23:02.281298193+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/CODETR/CODETR_r50_20e_New_custom/20250527_022300/vis_data/wandb/run-20250527_022302-4082nkdg/logs/debug-core.log"}
+{"time":"2025-05-27T02:23:02.710631865+04:00","level":"INFO","msg":"created new stream","id":"4082nkdg"}
+{"time":"2025-05-27T02:23:02.710672251+04:00","level":"INFO","msg":"stream: started","id":"4082nkdg"}
+{"time":"2025-05-27T02:23:02.710692509+04:00","level":"INFO","msg":"sender: started","stream_id":"4082nkdg"}
+{"time":"2025-05-27T02:23:02.710687449+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"4082nkdg"}
+{"time":"2025-05-27T02:23:02.710716985+04:00","level":"INFO","msg":"handler: started","stream_id":"4082nkdg"}
+{"time":"2025-05-27T02:23:03.040534276+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-27T02:24:33.224278378+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-27T02:24:33.224354701+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-27T02:24:34.225567879+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 365-368","runtime_seconds":0.426811066},{"desc":"uploading output.log","runtime_seconds":0.29839288,"progress":"30.6KB/30.6KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.298383261,"progress":"25B/25B"},{"desc":"uploading config.yaml","runtime_seconds":0.063420468,"progress":"22.7KB/22.7KB"}],"total_operations":4}}
+{"time":"2025-05-27T02:24:34.878490511+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-27T02:24:35.249081116+04:00","level":"INFO","msg":"stream: closing","id":"4082nkdg"}
+{"time":"2025-05-27T02:24:35.249091656+04:00","level":"INFO","msg":"handler: closed","stream_id":"4082nkdg"}
+{"time":"2025-05-27T02:24:35.249101534+04:00","level":"INFO","msg":"sender: closed","stream_id":"4082nkdg"}
+{"time":"2025-05-27T02:24:35.249098178+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4082nkdg"}
+{"time":"2025-05-27T02:24:35.24913137+04:00","level":"INFO","msg":"stream: closed","id":"4082nkdg"}

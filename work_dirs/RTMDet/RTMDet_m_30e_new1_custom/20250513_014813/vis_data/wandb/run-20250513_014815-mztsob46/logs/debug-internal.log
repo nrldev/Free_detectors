@@ -1,0 +1,16 @@
+{"time":"2025-05-13T01:48:15.060634941+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom/20250513_014813/vis_data/wandb/run-20250513_014815-mztsob46/logs/debug-core.log"}
+{"time":"2025-05-13T01:48:15.512514042+04:00","level":"INFO","msg":"created new stream","id":"mztsob46"}
+{"time":"2025-05-13T01:48:15.512551421+04:00","level":"INFO","msg":"stream: started","id":"mztsob46"}
+{"time":"2025-05-13T01:48:15.512564276+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"mztsob46"}
+{"time":"2025-05-13T01:48:15.512569886+04:00","level":"INFO","msg":"sender: started","stream_id":"mztsob46"}
+{"time":"2025-05-13T01:48:15.512581067+04:00","level":"INFO","msg":"handler: started","stream_id":"mztsob46"}
+{"time":"2025-05-13T01:48:15.86964023+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-13T02:43:38.294786607+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-13T02:43:38.294826081+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-13T02:43:39.295721026+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.389960225,"progress":"101.5KB/101.5KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.389947551,"progress":"494B/494B"},{"desc":"uploading config.yaml","runtime_seconds":0.130741065,"progress":"14.1KB/14.1KB"}],"total_operations":3}}
+{"time":"2025-05-13T02:43:39.827823358+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-13T02:43:40.286904517+04:00","level":"INFO","msg":"stream: closing","id":"mztsob46"}
+{"time":"2025-05-13T02:43:40.286924735+04:00","level":"INFO","msg":"handler: closed","stream_id":"mztsob46"}
+{"time":"2025-05-13T02:43:40.286935676+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"mztsob46"}
+{"time":"2025-05-13T02:43:40.286948309+04:00","level":"INFO","msg":"sender: closed","stream_id":"mztsob46"}
+{"time":"2025-05-13T02:43:40.287003102+04:00","level":"INFO","msg":"stream: closed","id":"mztsob46"}

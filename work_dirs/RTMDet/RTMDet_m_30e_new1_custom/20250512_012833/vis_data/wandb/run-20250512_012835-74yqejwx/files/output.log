@@ -1,0 +1,703 @@
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook
+(BELOW_NORMAL) LoggerHook
+(LOWEST      ) EarlyStoppingHook
+ --------------------
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(NORMAL      ) CustomFreezeHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DistSamplerSeedHook
+(NORMAL      ) CustomFreezeHook
+ --------------------
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+ --------------------
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+after_train_epoch:
+(NORMAL      ) IterTimerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+before_val_epoch:
+(NORMAL      ) IterTimerHook
+ --------------------
+before_val_iter:
+(NORMAL      ) IterTimerHook
+ --------------------
+after_val_iter:
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DetVisualizationHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+(LOWEST      ) EarlyStoppingHook
+ --------------------
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+before_test_epoch:
+(NORMAL      ) IterTimerHook
+ --------------------
+before_test_iter:
+(NORMAL      ) IterTimerHook
+ --------------------
+after_test_iter:
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DetVisualizationHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+after_run:
+(BELOW_NORMAL) LoggerHook
+ --------------------
+loading annotations into memory...
+Done (t=0.04s)
+creating index...
+index created!
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stem.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stem.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stem.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stem.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stem.2.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stem.2.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage1.1.attention.fc.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.2.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.2.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.2.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.2.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.2.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.2.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.3.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.3.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.3.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.3.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.3.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.blocks.3.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage2.1.attention.fc.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.2.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.2.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.2.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.2.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.2.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.2.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.3.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.3.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.3.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.3.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.3.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.blocks.3.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage3.1.attention.fc.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.1.conv2.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.1.conv2.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- backbone.stage4.2.attention.fc.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.reduce_layers.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.reduce_layers.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.reduce_layers.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.reduce_layers.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.0.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.top_down_blocks.1.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.downsamples.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.downsamples.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.downsamples.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.downsamples.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.0.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.main_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.main_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.short_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.short_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.final_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.final_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.0.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.0.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.0.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.0.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.1.conv1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.1.conv1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.1.conv2.depthwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.1.conv2.depthwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.1.conv2.pointwise_conv.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.bottom_up_blocks.1.blocks.1.conv2.pointwise_conv.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.out_convs.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.out_convs.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.out_convs.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.out_convs.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.out_convs.2.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- neck.out_convs.2.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.0.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.0.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.0.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.0.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.cls_convs.1.0.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.1.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.1.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.cls_convs.1.1.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.1.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.1.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.cls_convs.2.0.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.2.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.2.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.cls_convs.2.1.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.2.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.cls_convs.2.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.0.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.0.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.0.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.0.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.reg_convs.1.0.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.1.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.1.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.reg_convs.1.1.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.1.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.1.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.reg_convs.2.0.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.2.0.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.2.0.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [5m[4m[33mWARNING[0m - bbox_head.reg_convs.2.1.conv is duplicate. It is skipped since bypass_duplicate=True
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.2.1.bn.weight:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.reg_convs.2.1.bn.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.rtm_cls.0.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.rtm_cls.1.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.rtm_cls.2.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.rtm_reg.0.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.rtm_reg.1.bias:weight_decay=0.0
+05/12 01:28:37 - mmengine - [4m[97mINFO[0m - paramwise_options -- bbox_head.rtm_reg.2.bias:weight_decay=0.0
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+Loads checkpoint by local backend from path: /home/jaa/Work/Prog/BSU/Detectors/models/RTMDet/rtmdet_m_8xb32-300e_coco_20220719_112220-229f527c.pth
+/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/checkpoint.py:347: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(filename, map_location=map_location)
+The model and loaded state dict do not match exactly
+
+size mismatch for bbox_head.rtm_cls.0.weight: copying a param with shape torch.Size([80, 192, 1, 1]) from checkpoint, the shape in current model is torch.Size([1, 192, 1, 1]).
+size mismatch for bbox_head.rtm_cls.0.bias: copying a param with shape torch.Size([80]) from checkpoint, the shape in current model is torch.Size([1]).
+size mismatch for bbox_head.rtm_cls.1.weight: copying a param with shape torch.Size([80, 192, 1, 1]) from checkpoint, the shape in current model is torch.Size([1, 192, 1, 1]).
+size mismatch for bbox_head.rtm_cls.1.bias: copying a param with shape torch.Size([80]) from checkpoint, the shape in current model is torch.Size([1]).
+size mismatch for bbox_head.rtm_cls.2.weight: copying a param with shape torch.Size([80, 192, 1, 1]) from checkpoint, the shape in current model is torch.Size([1, 192, 1, 1]).
+size mismatch for bbox_head.rtm_cls.2.bias: copying a param with shape torch.Size([80]) from checkpoint, the shape in current model is torch.Size([1]).
+unexpected key in source state_dict: data_preprocessor.mean, data_preprocessor.std
+
+05/12 01:28:38 - mmengine - [4m[97mINFO[0m - Load checkpoint from /home/jaa/Work/Prog/BSU/Detectors/models/RTMDet/rtmdet_m_8xb32-300e_coco_20220719_112220-229f527c.pth
+05/12 01:28:38 - mmengine - [4m[97mINFO[0m - Backbone frozen before training.
+05/12 01:28:38 - mmengine - [5m[4m[33mWARNING[0m - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+05/12 01:28:38 - mmengine - [5m[4m[33mWARNING[0m - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+05/12 01:28:38 - mmengine - [4m[97mINFO[0m - Checkpoints will be saved to /home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom.
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/se_layer.py:158: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/csp_darknet.py:118: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+05/12 01:28:59 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][ 50/655]  base_lr: 2.4775e-04 lr: 2.4775e-04  eta: 2:22:26  time: 0.4361  data_time: 0.0115  memory: 16038  loss: 2.4228  loss_cls: 1.7408  loss_bbox: 0.6820
+05/12 01:29:21 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][100/655]  base_lr: 4.9800e-04 lr: 4.9800e-04  eta: 2:19:31  time: 0.4204  data_time: 0.0009  memory: 16022  loss: 1.6495  loss_cls: 1.1496  loss_bbox: 0.4999
+05/12 01:29:41 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][150/655]  base_lr: 7.4825e-04 lr: 7.4825e-04  eta: 2:17:58  time: 0.4172  data_time: 0.0010  memory: 16023  loss: 1.2871  loss_cls: 0.8832  loss_bbox: 0.4039
+05/12 01:30:02 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][200/655]  base_lr: 9.9850e-04 lr: 9.9850e-04  eta: 2:17:11  time: 0.4192  data_time: 0.0010  memory: 16037  loss: 0.9920  loss_cls: 0.6487  loss_bbox: 0.3433
+05/12 01:30:23 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][250/655]  base_lr: 1.2487e-03 lr: 1.2487e-03  eta: 2:16:28  time: 0.4176  data_time: 0.0010  memory: 16033  loss: 0.9087  loss_cls: 0.5765  loss_bbox: 0.3321
+05/12 01:30:44 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][300/655]  base_lr: 1.4990e-03 lr: 1.4990e-03  eta: 2:15:58  time: 0.4192  data_time: 0.0009  memory: 16036  loss: 0.8385  loss_cls: 0.5119  loss_bbox: 0.3266
+05/12 01:31:05 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][350/655]  base_lr: 1.7492e-03 lr: 1.7492e-03  eta: 2:15:26  time: 0.4178  data_time: 0.0010  memory: 16031  loss: 0.8086  loss_cls: 0.4756  loss_bbox: 0.3330
+05/12 01:31:26 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][400/655]  base_lr: 1.9995e-03 lr: 1.9995e-03  eta: 2:14:56  time: 0.4173  data_time: 0.0009  memory: 16012  loss: 0.7574  loss_cls: 0.4286  loss_bbox: 0.3287
+05/12 01:31:47 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][450/655]  base_lr: 2.2497e-03 lr: 2.2497e-03  eta: 2:14:32  time: 0.4191  data_time: 0.0009  memory: 16029  loss: 0.7301  loss_cls: 0.4184  loss_bbox: 0.3117
+05/12 01:32:08 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][500/655]  base_lr: 2.5000e-03 lr: 2.5000e-03  eta: 2:14:10  time: 0.4198  data_time: 0.0009  memory: 16022  loss: 0.7203  loss_cls: 0.4059  loss_bbox: 0.3143
+05/12 01:32:29 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][550/655]  base_lr: 2.5000e-03 lr: 2.5000e-03  eta: 2:13:44  time: 0.4176  data_time: 0.0007  memory: 16015  loss: 0.6978  loss_cls: 0.3784  loss_bbox: 0.3195
+05/12 01:32:50 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][600/655]  base_lr: 2.5000e-03 lr: 2.5000e-03  eta: 2:13:22  time: 0.4195  data_time: 0.0007  memory: 16027  loss: 0.6997  loss_cls: 0.3840  loss_bbox: 0.3158
+05/12 01:33:11 - mmengine - [4m[97mINFO[0m - Epoch(train)  [1][650/655]  base_lr: 2.5000e-03 lr: 2.5000e-03  eta: 2:12:58  time: 0.4182  data_time: 0.0007  memory: 16024  loss: 0.6801  loss_cls: 0.3748  loss_bbox: 0.3053
+05/12 01:33:13 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:33:13 - mmengine - [4m[97mINFO[0m - Saving checkpoint at 1 epochs
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/se_layer.py:158: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/csp_darknet.py:118: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+05/12 01:33:26 - mmengine - [4m[97mINFO[0m - Epoch(val)  [1][50/54]    eta: 0:00:01  time: 0.2505  data_time: 0.0130  memory: 16011
+05/12 01:33:28 - mmengine - [4m[97mINFO[0m - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.33s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.46s).
+Accumulating evaluation results...
+DONE (t=0.15s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.607
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.848
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.694
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.394
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.569
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.210
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.645
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.749
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.584
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.718
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.769
+05/12 01:33:31 - mmengine - [4m[97mINFO[0m - bbox_mAP_copypaste: 0.607 0.848 0.694 0.394 0.569 0.631
+05/12 01:33:31 - mmengine - [4m[97mINFO[0m - Epoch(val) [1][54/54]    coco/bbox_mAP: 0.6070  coco/bbox_mAP_50: 0.8480  coco/bbox_mAP_75: 0.6940  coco/bbox_mAP_s: 0.3940  coco/bbox_mAP_m: 0.5690  coco/bbox_mAP_l: 0.6310  data_time: 0.0124  time: 0.2458
+05/12 01:33:52 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][ 50/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:12:44  time: 0.4283  data_time: 0.0061  memory: 16039  loss: 0.6506  loss_cls: 0.3512  loss_bbox: 0.2994
+05/12 01:34:13 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][100/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:12:21  time: 0.4194  data_time: 0.0007  memory: 16032  loss: 0.6532  loss_cls: 0.3620  loss_bbox: 0.2912
+05/12 01:34:34 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][150/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:11:59  time: 0.4194  data_time: 0.0007  memory: 16039  loss: 0.6392  loss_cls: 0.3516  loss_bbox: 0.2876
+05/12 01:34:55 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][200/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:11:37  time: 0.4194  data_time: 0.0006  memory: 16018  loss: 0.6318  loss_cls: 0.3377  loss_bbox: 0.2941
+05/12 01:35:16 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][250/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:11:15  time: 0.4187  data_time: 0.0006  memory: 16022  loss: 0.6065  loss_cls: 0.3156  loss_bbox: 0.2910
+05/12 01:35:37 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][300/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:10:52  time: 0.4182  data_time: 0.0007  memory: 16021  loss: 0.6030  loss_cls: 0.3162  loss_bbox: 0.2867
+05/12 01:35:55 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:35:57 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][350/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:10:26  time: 0.4142  data_time: 0.0007  memory: 16033  loss: 0.6195  loss_cls: 0.3289  loss_bbox: 0.2906
+05/12 01:36:18 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][400/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:09:59  time: 0.4131  data_time: 0.0007  memory: 16019  loss: 0.6207  loss_cls: 0.3247  loss_bbox: 0.2960
+05/12 01:36:39 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][450/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:09:35  time: 0.4165  data_time: 0.0007  memory: 16033  loss: 0.5995  loss_cls: 0.3144  loss_bbox: 0.2851
+05/12 01:37:00 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][500/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:09:11  time: 0.4150  data_time: 0.0007  memory: 16033  loss: 0.6193  loss_cls: 0.3268  loss_bbox: 0.2925
+05/12 01:37:20 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][550/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:08:46  time: 0.4139  data_time: 0.0007  memory: 16036  loss: 0.5862  loss_cls: 0.3055  loss_bbox: 0.2807
+05/12 01:37:41 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][600/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:08:22  time: 0.4148  data_time: 0.0007  memory: 16049  loss: 0.5917  loss_cls: 0.3091  loss_bbox: 0.2825
+05/12 01:38:02 - mmengine - [4m[97mINFO[0m - Epoch(train)  [2][650/655]  base_lr: 2.4388e-03 lr: 2.4388e-03  eta: 2:07:58  time: 0.4137  data_time: 0.0006  memory: 16030  loss: 0.6226  loss_cls: 0.3261  loss_bbox: 0.2965
+05/12 01:38:04 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:38:04 - mmengine - [4m[97mINFO[0m - Saving checkpoint at 2 epochs
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/se_layer.py:158: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/csp_darknet.py:118: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+05/12 01:38:17 - mmengine - [4m[97mINFO[0m - Epoch(val)  [2][50/54]    eta: 0:00:00  time: 0.2482  data_time: 0.0092  memory: 16011
+05/12 01:38:19 - mmengine - [4m[97mINFO[0m - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.62s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.40s).
+Accumulating evaluation results...
+DONE (t=0.15s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.651
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.889
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.754
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.397
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.676
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.229
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.668
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.765
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.749
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.779
+05/12 01:38:22 - mmengine - [4m[97mINFO[0m - bbox_mAP_copypaste: 0.651 0.889 0.754 0.397 0.612 0.676
+05/12 01:38:22 - mmengine - [4m[97mINFO[0m - Epoch(val) [2][54/54]    coco/bbox_mAP: 0.6510  coco/bbox_mAP_50: 0.8890  coco/bbox_mAP_75: 0.7540  coco/bbox_mAP_s: 0.3970  coco/bbox_mAP_m: 0.6120  coco/bbox_mAP_l: 0.6760  data_time: 0.0089  time: 0.2398
+05/12 01:38:43 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][ 50/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:07:33  time: 0.4202  data_time: 0.0062  memory: 16017  loss: 0.5753  loss_cls: 0.3013  loss_bbox: 0.2741
+05/12 01:39:03 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][100/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:07:09  time: 0.4139  data_time: 0.0007  memory: 16020  loss: 0.5848  loss_cls: 0.3032  loss_bbox: 0.2816
+05/12 01:39:24 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][150/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:06:46  time: 0.4136  data_time: 0.0007  memory: 16023  loss: 0.6007  loss_cls: 0.3054  loss_bbox: 0.2953
+05/12 01:39:45 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][200/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:06:22  time: 0.4144  data_time: 0.0007  memory: 16044  loss: 0.5741  loss_cls: 0.2898  loss_bbox: 0.2843
+05/12 01:40:06 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][250/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:05:59  time: 0.4140  data_time: 0.0007  memory: 16017  loss: 0.5878  loss_cls: 0.3015  loss_bbox: 0.2862
+05/12 01:40:26 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][300/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:05:36  time: 0.4138  data_time: 0.0007  memory: 16027  loss: 0.5972  loss_cls: 0.3047  loss_bbox: 0.2926
+05/12 01:40:47 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][350/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:05:14  time: 0.4148  data_time: 0.0007  memory: 16046  loss: 0.5724  loss_cls: 0.2948  loss_bbox: 0.2776
+05/12 01:41:08 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][400/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:04:50  time: 0.4135  data_time: 0.0007  memory: 16011  loss: 0.5511  loss_cls: 0.2844  loss_bbox: 0.2667
+05/12 01:41:28 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][450/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:04:28  time: 0.4145  data_time: 0.0007  memory: 16035  loss: 0.5495  loss_cls: 0.2726  loss_bbox: 0.2769
+05/12 01:41:49 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][500/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:04:05  time: 0.4139  data_time: 0.0007  memory: 16041  loss: 0.5559  loss_cls: 0.2855  loss_bbox: 0.2703
+05/12 01:42:10 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][550/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:03:42  time: 0.4132  data_time: 0.0007  memory: 16029  loss: 0.5650  loss_cls: 0.2919  loss_bbox: 0.2731
+05/12 01:42:30 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][600/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:03:20  time: 0.4138  data_time: 0.0007  memory: 16022  loss: 0.5766  loss_cls: 0.2919  loss_bbox: 0.2847
+05/12 01:42:51 - mmengine - [4m[97mINFO[0m - Epoch(train)  [3][650/655]  base_lr: 2.2613e-03 lr: 2.2613e-03  eta: 2:02:58  time: 0.4135  data_time: 0.0007  memory: 16025  loss: 0.5349  loss_cls: 0.2751  loss_bbox: 0.2599
+05/12 01:42:53 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:42:53 - mmengine - [4m[97mINFO[0m - Saving checkpoint at 3 epochs
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/se_layer.py:158: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/csp_darknet.py:118: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+05/12 01:43:06 - mmengine - [4m[97mINFO[0m - Epoch(val)  [3][50/54]    eta: 0:00:00  time: 0.2476  data_time: 0.0100  memory: 16012
+05/12 01:43:08 - mmengine - [4m[97mINFO[0m - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.59s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.33s).
+Accumulating evaluation results...
+DONE (t=0.14s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.705
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.903
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.787
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.411
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.626
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.742
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.712
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.805
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.829
+05/12 01:43:11 - mmengine - [4m[97mINFO[0m - bbox_mAP_copypaste: 0.705 0.903 0.787 0.411 0.626 0.742
+05/12 01:43:11 - mmengine - [4m[97mINFO[0m - Epoch(val) [3][54/54]    coco/bbox_mAP: 0.7050  coco/bbox_mAP_50: 0.9030  coco/bbox_mAP_75: 0.7870  coco/bbox_mAP_s: 0.4110  coco/bbox_mAP_m: 0.6260  coco/bbox_mAP_l: 0.7420  data_time: 0.0096  time: 0.2389
+05/12 01:43:26 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:43:32 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][ 50/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:02:35  time: 0.4217  data_time: 0.0067  memory: 16012  loss: 0.5477  loss_cls: 0.2791  loss_bbox: 0.2685
+05/12 01:43:53 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][100/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:02:13  time: 0.4139  data_time: 0.0007  memory: 16039  loss: 0.5481  loss_cls: 0.2847  loss_bbox: 0.2634
+05/12 01:44:13 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][150/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:01:51  time: 0.4136  data_time: 0.0006  memory: 16032  loss: 0.5470  loss_cls: 0.2738  loss_bbox: 0.2732
+05/12 01:44:34 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][200/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:01:29  time: 0.4147  data_time: 0.0007  memory: 16037  loss: 0.5628  loss_cls: 0.2848  loss_bbox: 0.2780
+05/12 01:44:55 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][250/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:01:07  time: 0.4141  data_time: 0.0007  memory: 16046  loss: 0.5561  loss_cls: 0.2869  loss_bbox: 0.2692
+05/12 01:45:15 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][300/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:00:45  time: 0.4142  data_time: 0.0007  memory: 16013  loss: 0.5223  loss_cls: 0.2636  loss_bbox: 0.2587
+05/12 01:45:36 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][350/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:00:23  time: 0.4139  data_time: 0.0007  memory: 16019  loss: 0.5471  loss_cls: 0.2808  loss_bbox: 0.2663
+05/12 01:45:57 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][400/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 2:00:01  time: 0.4136  data_time: 0.0007  memory: 16013  loss: 0.5618  loss_cls: 0.2964  loss_bbox: 0.2655
+05/12 01:46:18 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][450/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 1:59:40  time: 0.4145  data_time: 0.0007  memory: 16033  loss: 0.5364  loss_cls: 0.2722  loss_bbox: 0.2642
+05/12 01:46:38 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][500/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 1:59:18  time: 0.4139  data_time: 0.0007  memory: 16015  loss: 0.5467  loss_cls: 0.2913  loss_bbox: 0.2554
+05/12 01:46:59 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][550/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 1:58:56  time: 0.4141  data_time: 0.0007  memory: 16038  loss: 0.5225  loss_cls: 0.2632  loss_bbox: 0.2593
+05/12 01:47:20 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][600/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 1:58:36  time: 0.4173  data_time: 0.0007  memory: 16036  loss: 0.5175  loss_cls: 0.2586  loss_bbox: 0.2589
+05/12 01:47:40 - mmengine - [4m[97mINFO[0m - Epoch(train)  [4][650/655]  base_lr: 1.9847e-03 lr: 1.9847e-03  eta: 1:58:14  time: 0.4137  data_time: 0.0007  memory: 16018  loss: 0.4960  loss_cls: 0.2450  loss_bbox: 0.2510
+05/12 01:47:42 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:47:42 - mmengine - [4m[97mINFO[0m - Saving checkpoint at 4 epochs
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/se_layer.py:158: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/csp_darknet.py:118: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+05/12 01:47:55 - mmengine - [4m[97mINFO[0m - Epoch(val)  [4][50/54]    eta: 0:00:00  time: 0.2457  data_time: 0.0092  memory: 16012
+05/12 01:47:57 - mmengine - [4m[97mINFO[0m - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.59s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.35s).
+Accumulating evaluation results...
+DONE (t=0.15s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.709
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.911
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.799
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.403
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.632
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.746
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.801
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.611
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.753
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.826
+05/12 01:48:00 - mmengine - [4m[97mINFO[0m - bbox_mAP_copypaste: 0.709 0.911 0.799 0.403 0.632 0.746
+05/12 01:48:00 - mmengine - [4m[97mINFO[0m - Epoch(val) [4][54/54]    coco/bbox_mAP: 0.7090  coco/bbox_mAP_50: 0.9110  coco/bbox_mAP_75: 0.7990  coco/bbox_mAP_s: 0.4030  coco/bbox_mAP_m: 0.6320  coco/bbox_mAP_l: 0.7460  data_time: 0.0088  time: 0.2371
+05/12 01:48:21 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][ 50/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:57:51  time: 0.4201  data_time: 0.0063  memory: 16039  loss: 0.5237  loss_cls: 0.2634  loss_bbox: 0.2603
+05/12 01:48:42 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][100/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:57:29  time: 0.4128  data_time: 0.0006  memory: 16033  loss: 0.5325  loss_cls: 0.2715  loss_bbox: 0.2610
+05/12 01:49:02 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][150/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:57:08  time: 0.4136  data_time: 0.0006  memory: 16011  loss: 0.5433  loss_cls: 0.2763  loss_bbox: 0.2670
+05/12 01:49:23 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][200/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:56:46  time: 0.4130  data_time: 0.0006  memory: 16039  loss: 0.5016  loss_cls: 0.2527  loss_bbox: 0.2490
+05/12 01:49:44 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][250/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:56:24  time: 0.4134  data_time: 0.0007  memory: 16023  loss: 0.5161  loss_cls: 0.2607  loss_bbox: 0.2555
+05/12 01:50:04 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][300/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:56:03  time: 0.4147  data_time: 0.0008  memory: 16014  loss: 0.5407  loss_cls: 0.2743  loss_bbox: 0.2664
+05/12 01:50:25 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][350/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:55:41  time: 0.4140  data_time: 0.0007  memory: 16016  loss: 0.5583  loss_cls: 0.2764  loss_bbox: 0.2819
+05/12 01:50:37 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:50:46 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][400/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:55:20  time: 0.4143  data_time: 0.0007  memory: 16021  loss: 0.5089  loss_cls: 0.2524  loss_bbox: 0.2565
+05/12 01:51:06 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][450/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:54:59  time: 0.4146  data_time: 0.0007  memory: 16041  loss: 0.5318  loss_cls: 0.2680  loss_bbox: 0.2638
+05/12 01:51:27 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][500/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:54:37  time: 0.4139  data_time: 0.0007  memory: 16023  loss: 0.5376  loss_cls: 0.2757  loss_bbox: 0.2619
+05/12 01:51:48 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][550/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:54:17  time: 0.4158  data_time: 0.0006  memory: 16032  loss: 0.4983  loss_cls: 0.2516  loss_bbox: 0.2467
+05/12 01:52:09 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][600/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:53:55  time: 0.4140  data_time: 0.0006  memory: 16025  loss: 0.5195  loss_cls: 0.2634  loss_bbox: 0.2561
+05/12 01:52:29 - mmengine - [4m[97mINFO[0m - Epoch(train)  [5][650/655]  base_lr: 1.6363e-03 lr: 1.6363e-03  eta: 1:53:34  time: 0.4136  data_time: 0.0007  memory: 16039  loss: 0.4958  loss_cls: 0.2493  loss_bbox: 0.2465
+05/12 01:52:31 - mmengine - [4m[97mINFO[0m - Exp name: rtmdet_m_1x_custom_20250512_012833
+05/12 01:52:31 - mmengine - [4m[97mINFO[0m - Saving checkpoint at 5 epochs
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/se_layer.py:158: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/csp_darknet.py:118: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=False):
+05/12 01:52:44 - mmengine - [4m[97mINFO[0m - Epoch(val)  [5][50/54]    eta: 0:00:00  time: 0.2468  data_time: 0.0098  memory: 16041
+05/12 01:52:46 - mmengine - [4m[97mINFO[0m - Evaluating bbox...
+Loading and preparing results...
+DONE (t=0.60s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=1.40s).
+Accumulating evaluation results...
+DONE (t=0.15s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.722
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.917
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.813
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.439
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.638
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.258
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.722
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.811
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.640
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.756
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.838
+05/12 01:52:49 - mmengine - [4m[97mINFO[0m - bbox_mAP_copypaste: 0.722 0.917 0.813 0.439 0.638 0.760
+05/12 01:52:49 - mmengine - [4m[97mINFO[0m - Epoch(val) [5][54/54]    coco/bbox_mAP: 0.7220  coco/bbox_mAP_50: 0.9170  coco/bbox_mAP_75: 0.8130  coco/bbox_mAP_s: 0.4390  coco/bbox_mAP_m: 0.6380  coco/bbox_mAP_l: 0.7600  data_time: 0.0094  time: 0.2390
+05/12 01:52:49 - mmengine - [4m[97mINFO[0m - Backbone was unfrozen at epoch 5
+Traceback (most recent call last):
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/./tools/train.py", line 145, in <module>
+    main()
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/./tools/train.py", line 124, in main
+    runner.train()
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/runner.py", line 1777, in train
+    model = self.train_loop.run()  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/loops.py", line 98, in run
+    self.run_epoch()
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/loops.py", line 115, in run_epoch
+    self.run_iter(idx, data_batch)
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/loops.py", line 131, in run_iter
+    outputs = self.runner.model.train_step(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/model/base_model/base_model.py", line 114, in train_step
+    losses = self._run_forward(data, mode='loss')  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/model/base_model/base_model.py", line 361, in _run_forward
+    results = self(**data, mode=mode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base.py", line 92, in forward
+    return self.loss(inputs, data_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/single_stage.py", line 77, in loss
+    x = self.extract_feat(batch_inputs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/single_stage.py", line 146, in extract_feat
+    x = self.backbone(batch_inputs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/cspnext.py", line 192, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/csp_layer.py", line 240, in forward
+    x_main = self.blocks(x_main)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/layers/csp_layer.py", line 145, in forward
+    out = self.conv2(out)
+          ^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmcv/cnn/bricks/depthwise_separable_conv_module.py", line 98, in forward
+    x = self.pointwise_conv(x)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmcv/cnn/bricks/conv_module.py", line 285, in forward
+    x = self.activate(x)
+        ^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/activation.py", line 405, in forward
+    return F.silu(input, inplace=self.inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/functional.py", line 2104, in silu
+    return torch._C._nn.silu_(input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 132.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 16.88 MiB is free. Including non-PyTorch memory, this process has 22.89 GiB memory in use. Of the allocated memory 22.36 GiB is allocated by PyTorch, and 83.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

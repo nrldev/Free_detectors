@@ -1,0 +1,15 @@
+{"time":"2025-05-31T14:28:17.382042624+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_20e_AdamW_15_18_custom/20250531_142814/vis_data/wandb/run-20250531_142817-rtodm289/logs/debug-core.log"}
+{"time":"2025-05-31T14:28:17.79622835+04:00","level":"INFO","msg":"created new stream","id":"rtodm289"}
+{"time":"2025-05-31T14:28:17.796269036+04:00","level":"INFO","msg":"stream: started","id":"rtodm289"}
+{"time":"2025-05-31T14:28:17.796295305+04:00","level":"INFO","msg":"sender: started","stream_id":"rtodm289"}
+{"time":"2025-05-31T14:28:17.796292881+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"rtodm289"}
+{"time":"2025-05-31T14:28:17.796315603+04:00","level":"INFO","msg":"handler: started","stream_id":"rtodm289"}
+{"time":"2025-05-31T14:28:18.05553644+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-31T14:28:46.209596014+04:00","level":"INFO","msg":"stream: closing","id":"rtodm289"}
+{"time":"2025-05-31T14:28:46.209617675+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-31T14:28:46.209700169+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-31T14:28:47.192306548+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-31T14:28:47.584561368+04:00","level":"INFO","msg":"handler: closed","stream_id":"rtodm289"}
+{"time":"2025-05-31T14:28:47.584593108+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rtodm289"}
+{"time":"2025-05-31T14:28:47.584618124+04:00","level":"INFO","msg":"sender: closed","stream_id":"rtodm289"}
+{"time":"2025-05-31T14:28:47.584639224+04:00","level":"INFO","msg":"stream: closed","id":"rtodm289"}

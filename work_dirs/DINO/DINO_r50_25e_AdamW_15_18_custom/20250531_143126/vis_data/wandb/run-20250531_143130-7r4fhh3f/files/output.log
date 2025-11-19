@@ -1,0 +1,453 @@
+05/31 14:31:34 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+05/31 14:31:34 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook
+(BELOW_NORMAL) LoggerHook
+(LOWEST      ) EarlyStoppingHook
+ --------------------
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DistSamplerSeedHook
+ --------------------
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+ --------------------
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+after_train_epoch:
+(NORMAL      ) IterTimerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+before_val_epoch:
+(NORMAL      ) IterTimerHook
+ --------------------
+before_val_iter:
+(NORMAL      ) IterTimerHook
+ --------------------
+after_val_iter:
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DetVisualizationHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+(LOWEST      ) EarlyStoppingHook
+ --------------------
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+before_test_epoch:
+(NORMAL      ) IterTimerHook
+ --------------------
+before_test_iter:
+(NORMAL      ) IterTimerHook
+ --------------------
+after_test_iter:
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DetVisualizationHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+after_run:
+(BELOW_NORMAL) LoggerHook
+ --------------------
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.24s)
+creating index...
+index created!
+Loads checkpoint by local backend from path: /home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_25e_AdamW_15_18_custom/best_epoch_24.pth
+/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/checkpoint.py:347: FutureWarning:
+
+You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+05/31 14:31:38 - mmengine - INFO - Load checkpoint from /home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_25e_AdamW_15_18_custom/best_epoch_24.pth
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.downsample.0.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.downsample.0.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.0.downsample.0.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.downsample.1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.0.downsample.1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.1.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.1.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.1.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.1.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.1.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.1.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.1.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.2.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.2.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.2.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.2.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer1.2.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.2.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer1.2.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.downsample.0.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.downsample.0.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.downsample.0.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.downsample.1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.0.downsample.1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.1.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.1.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.1.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.1.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.1.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.1.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.2.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.2.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.2.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.2.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.2.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.2.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.3.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.3.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.3.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.3.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.3.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer2.3.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.downsample.0.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.downsample.0.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.downsample.0.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.downsample.1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.0.downsample.1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.1.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.1.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.1.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.1.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.1.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.1.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.2.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.2.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.2.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.2.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.2.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.2.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.3.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.3.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.3.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.3.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.3.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.3.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.4.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.4.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.4.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.4.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.4.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.4.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.5.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.5.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.5.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.5.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.5.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer3.5.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.downsample.0.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.downsample.0.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.downsample.0.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.downsample.1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.0.downsample.1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.1.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.1.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.1.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.1.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.1.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.1.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv1.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv1.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv1.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.2.bn1.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.2.bn1.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv2.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv2.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv2.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.2.bn2.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.2.bn2.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv3.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv3.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv3.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.2.bn3.weight is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - WARNING - backbone.layer4.2.bn3.bias is skipped since its requires_grad=False
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.0.self_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.0.self_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.0.self_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.0.self_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.0.self_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.0.self_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.1.self_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.1.self_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.1.self_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.1.self_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.1.self_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.1.self_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.2.self_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.2.self_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.2.self_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.2.self_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.2.self_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.2.self_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.3.self_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.3.self_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.3.self_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.3.self_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.3.self_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.3.self_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.4.self_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.4.self_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.4.self_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.4.self_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.4.self_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.4.self_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.5.self_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.5.self_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.5.self_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.5.self_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.5.self_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- encoder.layers.5.self_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.0.cross_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.0.cross_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.0.cross_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.0.cross_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.0.cross_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.0.cross_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.1.cross_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.1.cross_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.1.cross_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.1.cross_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.1.cross_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.1.cross_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.2.cross_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.2.cross_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.2.cross_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.2.cross_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.2.cross_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.2.cross_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.3.cross_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.3.cross_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.3.cross_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.3.cross_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.3.cross_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.3.cross_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.4.cross_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.4.cross_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.4.cross_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.4.cross_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.4.cross_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.4.cross_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.5.cross_attn.sampling_offsets.weight:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.5.cross_attn.sampling_offsets.weight:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.5.cross_attn.sampling_offsets.weight:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.5.cross_attn.sampling_offsets.bias:lr=0.0001
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.5.cross_attn.sampling_offsets.bias:weight_decay=0.05
+05/31 14:31:38 - mmengine - INFO - paramwise_options -- decoder.layers.5.cross_attn.sampling_offsets.bias:lr_mult=0.1
+05/31 14:31:38 - mmengine - INFO - resumed epoch: 24, iter: 109992
+
+/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/functional.py:513: UserWarning:
+
+torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3609.)
+05/31 14:31:46 - mmengine - INFO - Epoch(test) [ 50/285]    eta: 0:00:39  time: 0.1694  data_time: 0.0058  memory: 1529
+05/31 14:31:55 - mmengine - INFO - Epoch(test) [100/285]    eta: 0:00:30  time: 0.1624  data_time: 0.0019  memory: 1529
+05/31 14:32:03 - mmengine - INFO - Epoch(test) [150/285]    eta: 0:00:22  time: 0.1612  data_time: 0.0019  memory: 1529
+05/31 14:32:11 - mmengine - INFO - Epoch(test) [200/285]    eta: 0:00:13  time: 0.1614  data_time: 0.0019  memory: 1529
+05/31 14:32:19 - mmengine - INFO - Epoch(test) [250/285]    eta: 0:00:05  time: 0.1607  data_time: 0.0018  memory: 1529
+05/31 14:32:37 - mmengine - INFO - results are saved in /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test
+05/31 14:32:37 - mmengine - INFO - Epoch(test) [285/285]    data_time: 0.0025  time: 0.1624

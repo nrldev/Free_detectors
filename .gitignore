@@ -1,0 +1,17 @@
+/configs/
+/mmdetection/
+/models/
+/weight/
+/!results_prod.csv
+/!results_repro.csv
+
+# Ignore IDE configuration files
+.idea/
+
+# Ignore Python artifacts
+*.pyc
+__pycache__/
+
+# Ignore experiment tracking logs
+#*vis_data/
+#wandb/

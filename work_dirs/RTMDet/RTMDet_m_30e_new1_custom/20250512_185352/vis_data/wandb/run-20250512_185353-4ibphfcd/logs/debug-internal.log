@@ -1,0 +1,16 @@
+{"time":"2025-05-12T18:53:53.897079336+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom/20250512_185352/vis_data/wandb/run-20250512_185353-4ibphfcd/logs/debug-core.log"}
+{"time":"2025-05-12T18:53:54.296225591+04:00","level":"INFO","msg":"created new stream","id":"4ibphfcd"}
+{"time":"2025-05-12T18:53:54.296261649+04:00","level":"INFO","msg":"stream: started","id":"4ibphfcd"}
+{"time":"2025-05-12T18:53:54.296285834+04:00","level":"INFO","msg":"handler: started","stream_id":"4ibphfcd"}
+{"time":"2025-05-12T18:53:54.296293338+04:00","level":"INFO","msg":"sender: started","stream_id":"4ibphfcd"}
+{"time":"2025-05-12T18:53:54.296380852+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"4ibphfcd"}
+{"time":"2025-05-12T18:53:54.613999444+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-12T20:49:07.01564005+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-12T20:49:07.015666209+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-12T20:49:08.01685054+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.45897865,"progress":"166.3KB/166.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.458969964,"progress":"493B/493B"},{"desc":"uploading config.yaml","runtime_seconds":0.183419848,"progress":"15.5KB/15.5KB"}],"total_operations":3}}
+{"time":"2025-05-12T20:49:08.79563676+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-12T20:49:09.140193386+04:00","level":"INFO","msg":"stream: closing","id":"4ibphfcd"}
+{"time":"2025-05-12T20:49:09.140204567+04:00","level":"INFO","msg":"handler: closed","stream_id":"4ibphfcd"}
+{"time":"2025-05-12T20:49:09.140209727+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4ibphfcd"}
+{"time":"2025-05-12T20:49:09.140220878+04:00","level":"INFO","msg":"sender: closed","stream_id":"4ibphfcd"}
+{"time":"2025-05-12T20:49:09.140254801+04:00","level":"INFO","msg":"stream: closed","id":"4ibphfcd"}

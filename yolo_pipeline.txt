@@ -1,0 +1,34 @@
+1. Run YOLO validation:
+   yolo val model='/home/jaa/Work/Prog/BSU/Detectors/projects/YOLO/Сomparison of detectors/YOLOv11l_RESULT/weights/best.pt' \
+   data='/home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/data.yaml' \
+   save_json=True project='/home/jaa/Work/Prog/BSU/Detectors/work_dirs/results/YOLOv11' name='raw_run'
+
+   This command runs YOLO model validation.
+   It uses the specified model and data, and saves predictions in JSON format. Predictions will be saved to
+   /home/jaa/Work/Prog/BSU/Detectors/work_dirs/results/YOLOv11/raw_run/predictions.json
+
+2. Reformat predictions:
+   python reformat_yolo_json.py
+   This script converts raw YOLO predictions into COCO format, which is necessary for the evaluation script
+
+3. Run evaluation and obtain results:
+   Before running the next command, ensure that the eval.py file has the correct path to the ground truth annotations (test_coco.json)
+   python eval.py
+
+   This script compares the model's predictions with the ground truth annotations and generates a results.txt file
+   with accuracy metrics in the /home/jaa/Work/Prog/BSU/Detectors/work_dirs/results/YOLOv11/ directory
+
+-----------------RU----------------------------
+1. Сгенерировать предсказания YOLO:
+   yolo val model='/home/jaa/Work/Prog/BSU/Detectors/projects/YOLO/Сomparison of detectors/YOLOv11l_RESULT/weights/best.pt' \
+   data='/home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/data.yaml' \
+   save_json=True project='/home/jaa/Work/Prog/BSU/Detectors/work_dirs/results/YOLOv11' name='raw_run'
+
+   Это создаст файл predictions.json в каталоге /home/jaa/Work/Prog/BSU/Detectors/work_dirs/results/YOLOv11/raw_run
+
+2. Отформатировать предсказания:
+   python /home/jaa/Work/Prog/BSU/Detectors/reformat_yolo_json.py
+
+3. Запустить оценку:
+   python /home/jaa/Work/Prog/BSU/Detectors/eval.py
+   Это создаст файл results.txt в /home/jaa/Work/Prog/BSU/Detectors/work_dirs/results/YOLOv11/.

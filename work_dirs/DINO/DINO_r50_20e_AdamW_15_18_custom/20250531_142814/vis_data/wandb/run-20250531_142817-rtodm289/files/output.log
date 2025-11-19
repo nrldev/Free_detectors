@@ -1,0 +1,227 @@
+05/31 14:28:22 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+05/31 14:28:22 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook
+(BELOW_NORMAL) LoggerHook
+(LOWEST      ) EarlyStoppingHook
+ --------------------
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DistSamplerSeedHook
+ --------------------
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+ --------------------
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+after_train_epoch:
+(NORMAL      ) IterTimerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+before_val_epoch:
+(NORMAL      ) IterTimerHook
+ --------------------
+before_val_iter:
+(NORMAL      ) IterTimerHook
+ --------------------
+after_val_iter:
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DetVisualizationHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+(LOW         ) ParamSchedulerHook
+(VERY_LOW    ) CheckpointHook
+(LOWEST      ) EarlyStoppingHook
+ --------------------
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook
+(VERY_LOW    ) CheckpointHook
+ --------------------
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+before_test_epoch:
+(NORMAL      ) IterTimerHook
+ --------------------
+before_test_iter:
+(NORMAL      ) IterTimerHook
+ --------------------
+after_test_iter:
+(NORMAL      ) IterTimerHook
+(NORMAL      ) DetVisualizationHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook
+(NORMAL      ) IterTimerHook
+(BELOW_NORMAL) LoggerHook
+ --------------------
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook
+ --------------------
+after_run:
+(BELOW_NORMAL) LoggerHook
+ --------------------
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.24s)
+creating index...
+index created!
+Loads checkpoint by local backend from path: /home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_20e_AdamW_15_18_custom/best_epoch_20.pth
+/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/checkpoint.py:347: FutureWarning:
+
+You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+05/31 14:28:25 - mmengine - INFO - Load checkpoint from /home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_20e_AdamW_15_18_custom/best_epoch_20.pth
+
+Traceback (most recent call last):
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/loops.py", line 487, in run_iter
+    outputs = self.runner.model.test_step(data_batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/model/base_model/base_model.py", line 145, in test_step
+    return self._run_forward(data, mode='predict')  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/model/base_model/base_model.py", line 361, in _run_forward
+    results = self(**data, mode=mode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base.py", line 94, in forward
+    return self.predict(inputs, data_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base_detr.py", line 133, in predict
+    img_feats = self.extract_feat(batch_inputs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base_detr.py", line 237, in extract_feat
+    x = self.backbone(batch_inputs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/resnet.py", line 636, in forward
+    x = self.conv1(x)
+        ^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 151.38 MiB is free. Process 5980 has 12.03 MiB memory in use. Process 170512 has 384.00 MiB memory in use. Process 298243 has 21.63 GiB memory in use. Including non-PyTorch memory, this process has 684.00 MiB memory in use. Of the allocated memory 223.10 MiB is allocated by PyTorch, and 14.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/jaa/.local/share/JetBrains/Toolbox/apps/pycharm-professional/plugins/python-ce/helpers/pydev/pydevd.py", line 2270, in <module>
+    main()
+  File "/home/jaa/.local/share/JetBrains/Toolbox/apps/pycharm-professional/plugins/python-ce/helpers/pydev/pydevd.py", line 2252, in main
+    globals = debugger.run(setup['file'], None, None, is_module)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/.local/share/JetBrains/Toolbox/apps/pycharm-professional/plugins/python-ce/helpers/pydev/pydevd.py", line 1563, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/.local/share/JetBrains/Toolbox/apps/pycharm-professional/plugins/python-ce/helpers/pydev/pydevd.py", line 1570, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/.local/share/JetBrains/Toolbox/apps/pycharm-professional/plugins/python-ce/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/tools/test.py", line 149, in <module>
+    main()
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/tools/test.py", line 145, in main
+    runner.test()
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/runner.py", line 1823, in test
+    metrics = self.test_loop.run()  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/loops.py", line 463, in run
+    self.run_iter(idx, data_batch)
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/runner/loops.py", line 487, in run_iter
+    outputs = self.runner.model.test_step(data_batch)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/model/base_model/base_model.py", line 145, in test_step
+    return self._run_forward(data, mode='predict')  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/mmengine/model/base_model/base_model.py", line 361, in _run_forward
+    results = self(**data, mode=mode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base.py", line 94, in forward
+    return self.predict(inputs, data_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base_detr.py", line 133, in predict
+    img_feats = self.extract_feat(batch_inputs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/detectors/base_detr.py", line 237, in extract_feat
+    x = self.backbone(batch_inputs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/mmdet/models/backbones/resnet.py", line 636, in forward
+    x = self.conv1(x)
+        ^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jaa/miniconda3/envs/detectors/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 23.52 GiB of which 151.38 MiB is free. Process 5980 has 12.03 MiB memory in use. Process 170512 has 384.00 MiB memory in use. Process 298243 has 21.63 GiB memory in use. Including non-PyTorch memory, this process has 684.00 MiB memory in use. Of the allocated memory 223.10 MiB is allocated by PyTorch, and 14.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,16 @@
+{"time":"2025-05-26T11:58:36.234068897+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTDETR/RTDETR_r50_36e_5b_New_custom/20250526_115833/vis_data/wandb/run-20250526_115836-lv3s2wqc/logs/debug-core.log"}
+{"time":"2025-05-26T11:58:36.630907314+04:00","level":"INFO","msg":"created new stream","id":"lv3s2wqc"}
+{"time":"2025-05-26T11:58:36.630960734+04:00","level":"INFO","msg":"stream: started","id":"lv3s2wqc"}
+{"time":"2025-05-26T11:58:36.63099088+04:00","level":"INFO","msg":"sender: started","stream_id":"lv3s2wqc"}
+{"time":"2025-05-26T11:58:36.630994176+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"lv3s2wqc"}
+{"time":"2025-05-26T11:58:36.631016668+04:00","level":"INFO","msg":"handler: started","stream_id":"lv3s2wqc"}
+{"time":"2025-05-26T11:58:37.003304071+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-26T11:59:11.931100596+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-26T11:59:11.931160528+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-26T11:59:12.896727162+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.237100052,"progress":"14.8KB/14.8KB"}],"total_operations":1}}
+{"time":"2025-05-26T11:59:13.111363423+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-26T11:59:13.441563434+04:00","level":"INFO","msg":"stream: closing","id":"lv3s2wqc"}
+{"time":"2025-05-26T11:59:13.441575917+04:00","level":"INFO","msg":"handler: closed","stream_id":"lv3s2wqc"}
+{"time":"2025-05-26T11:59:13.44158808+04:00","level":"INFO","msg":"sender: closed","stream_id":"lv3s2wqc"}
+{"time":"2025-05-26T11:59:13.441587649+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lv3s2wqc"}
+{"time":"2025-05-26T11:59:13.441640718+04:00","level":"INFO","msg":"stream: closed","id":"lv3s2wqc"}

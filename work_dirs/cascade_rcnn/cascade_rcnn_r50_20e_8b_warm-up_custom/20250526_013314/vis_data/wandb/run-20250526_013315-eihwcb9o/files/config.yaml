@@ -1,0 +1,653 @@
+_wandb:
+    value:
+        cli_version: 0.19.9
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 37
+                - 38
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 82
+            "2":
+                - 1
+                - 5
+                - 11
+                - 37
+                - 38
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 82
+            "3":
+                - 2
+                - 13
+                - 23
+                - 55
+            "4": 3.11.11
+            "5": 0.19.9
+            "6": 4.51.2
+            "8":
+                - 5
+            "12": 0.19.9
+            "13": linux-x86_64
+HOME:
+    value: /home/jaa/Work/Prog/BSU/Detectors
+MODEL_GROUP:
+    value: 2stage
+MODEL_TYPE:
+    value: cascade_rcnn
+WEIGHT_SIZE:
+    value: r50
+additions:
+    value: warm-up
+auto_scale_lr:
+    value:
+        base_batch_size: 16
+        enable: false
+backend_args:
+    value: null
+batch_size:
+    value: 8
+checkpoint_config:
+    value:
+        interval: 1
+data_root:
+    value: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+dataset_type:
+    value: CocoDataset
+default_hooks:
+    value:
+        checkpoint:
+            interval: 1
+            type: CheckpointHook
+        early_stopping:
+            min_delta: 0.001
+            monitor: coco/bbox_mAP
+            patience: 3
+            type: EarlyStoppingHook
+        logger:
+            interval: 50
+            log_metric_by_epoch: true
+            type: LoggerHook
+        param_scheduler:
+            type: ParamSchedulerHook
+        sampler_seed:
+            type: DistSamplerSeedHook
+        timer:
+            type: IterTimerHook
+        visualization:
+            draw: false
+            show: false
+            type: DetVisualizationHook
+            wait_time: 2
+default_scope:
+    value: mmdet
+deterministic:
+    value: true
+env_cfg:
+    value:
+        cudnn_benchmark: false
+        dist_cfg:
+            backend: nccl
+        mp_cfg:
+            mp_start_method: fork
+            opencv_num_threads: 0
+evaluation:
+    value:
+        interval: 1
+        metric: bbox
+experiment:
+    value: cascade_rcnn_r50_20e_8b_warm-up_custom
+image_size:
+    value:
+        - 1280
+        - 1280
+launcher:
+    value: none
+load_from:
+    value: /home/jaa/Work/Prog/BSU/Detectors/work_dirs/cascade_rcnn/cascade_rcnn_r50_20e_8b_warm-up_custom/best_epoch_13.pth
+log_level:
+    value: INFO
+log_processor:
+    value:
+        by_epoch: true
+        type: LogProcessor
+        window_size: 50
+metainfo:
+    value:
+        classes:
+            - cow
+        palette:
+            - - 220
+              - 20
+              - 60
+model:
+    value:
+        backbone:
+            depth: 50
+            frozen_stages: 1
+            init_cfg:
+                checkpoint: torchvision://resnet50
+                type: Pretrained
+            norm_cfg:
+                requires_grad: true
+                type: BN
+            norm_eval: true
+            num_stages: 4
+            out_indices:
+                - 0
+                - 1
+                - 2
+                - 3
+            style: pytorch
+            type: ResNet
+        data_preprocessor:
+            bgr_to_rgb: true
+            mean:
+                - 123.675
+                - 116.28
+                - 103.53
+            pad_size_divisor: 32
+            std:
+                - 58.395
+                - 57.12
+                - 57.375
+            type: DetDataPreprocessor
+        neck:
+            in_channels:
+                - 256
+                - 512
+                - 1024
+                - 2048
+            num_outs: 5
+            out_channels: 256
+            type: FPN
+        roi_head:
+            bbox_head:
+                - bbox_coder:
+                    target_means:
+                        - 0
+                        - 0
+                        - 0
+                        - 0
+                    target_stds:
+                        - 0.1
+                        - 0.1
+                        - 0.2
+                        - 0.2
+                    type: DeltaXYWHBBoxCoder
+                  fc_out_channels: 1024
+                  in_channels: 256
+                  loss_bbox:
+                    beta: 1
+                    loss_weight: 1
+                    type: SmoothL1Loss
+                  loss_cls:
+                    loss_weight: 1
+                    type: CrossEntropyLoss
+                    use_sigmoid: false
+                  num_classes: 1
+                  reg_class_agnostic: true
+                  roi_feat_size: 7
+                  type: Shared2FCBBoxHead
+                - bbox_coder:
+                    target_means:
+                        - 0
+                        - 0
+                        - 0
+                        - 0
+                    target_stds:
+                        - 0.05
+                        - 0.05
+                        - 0.1
+                        - 0.1
+                    type: DeltaXYWHBBoxCoder
+                  fc_out_channels: 1024
+                  in_channels: 256
+                  loss_bbox:
+                    beta: 1
+                    loss_weight: 1
+                    type: SmoothL1Loss
+                  loss_cls:
+                    loss_weight: 1
+                    type: CrossEntropyLoss
+                    use_sigmoid: false
+                  num_classes: 1
+                  reg_class_agnostic: true
+                  roi_feat_size: 7
+                  type: Shared2FCBBoxHead
+                - bbox_coder:
+                    target_means:
+                        - 0
+                        - 0
+                        - 0
+                        - 0
+                    target_stds:
+                        - 0.033
+                        - 0.033
+                        - 0.067
+                        - 0.067
+                    type: DeltaXYWHBBoxCoder
+                  fc_out_channels: 1024
+                  in_channels: 256
+                  loss_bbox:
+                    beta: 1
+                    loss_weight: 1
+                    type: SmoothL1Loss
+                  loss_cls:
+                    loss_weight: 1
+                    type: CrossEntropyLoss
+                    use_sigmoid: false
+                  num_classes: 1
+                  reg_class_agnostic: true
+                  roi_feat_size: 7
+                  type: Shared2FCBBoxHead
+            bbox_roi_extractor:
+                featmap_strides:
+                    - 4
+                    - 8
+                    - 16
+                    - 32
+                out_channels: 256
+                roi_layer:
+                    output_size: 7
+                    sampling_ratio: 0
+                    type: RoIAlign
+                type: SingleRoIExtractor
+            num_stages: 3
+            stage_loss_weights:
+                - 1
+                - 0.5
+                - 0.25
+            type: CascadeRoIHead
+        rpn_head:
+            anchor_generator:
+                ratios:
+                    - 0.5
+                    - 1
+                    - 2
+                scales:
+                    - 8
+                strides:
+                    - 4
+                    - 8
+                    - 16
+                    - 32
+                    - 64
+                type: AnchorGenerator
+            bbox_coder:
+                target_means:
+                    - 0
+                    - 0
+                    - 0
+                    - 0
+                target_stds:
+                    - 1
+                    - 1
+                    - 1
+                    - 1
+                type: DeltaXYWHBBoxCoder
+            feat_channels: 256
+            in_channels: 256
+            loss_bbox:
+                beta: 0.1111111111111111
+                loss_weight: 1
+                type: SmoothL1Loss
+            loss_cls:
+                loss_weight: 1
+                type: CrossEntropyLoss
+                use_sigmoid: true
+            type: RPNHead
+        test_cfg:
+            rcnn:
+                max_per_img: 100
+                nms:
+                    iou_threshold: 0.5
+                    type: nms
+                score_thr: 0.05
+            rpn:
+                max_per_img: 1000
+                min_bbox_size: 0
+                nms:
+                    iou_threshold: 0.7
+                    type: nms
+                nms_pre: 1000
+        train_cfg:
+            rcnn:
+                - assigner:
+                    ignore_iof_thr: -1
+                    match_low_quality: false
+                    min_pos_iou: 0.5
+                    neg_iou_thr: 0.5
+                    pos_iou_thr: 0.5
+                    type: MaxIoUAssigner
+                  debug: false
+                  pos_weight: -1
+                  sampler:
+                    add_gt_as_proposals: true
+                    neg_pos_ub: -1
+                    num: 512
+                    pos_fraction: 0.25
+                    type: RandomSampler
+                - assigner:
+                    ignore_iof_thr: -1
+                    match_low_quality: false
+                    min_pos_iou: 0.6
+                    neg_iou_thr: 0.6
+                    pos_iou_thr: 0.6
+                    type: MaxIoUAssigner
+                  debug: false
+                  pos_weight: -1
+                  sampler:
+                    add_gt_as_proposals: true
+                    neg_pos_ub: -1
+                    num: 512
+                    pos_fraction: 0.25
+                    type: RandomSampler
+                - assigner:
+                    ignore_iof_thr: -1
+                    match_low_quality: false
+                    min_pos_iou: 0.7
+                    neg_iou_thr: 0.7
+                    pos_iou_thr: 0.7
+                    type: MaxIoUAssigner
+                  debug: false
+                  pos_weight: -1
+                  sampler:
+                    add_gt_as_proposals: true
+                    neg_pos_ub: -1
+                    num: 512
+                    pos_fraction: 0.25
+                    type: RandomSampler
+            rpn:
+                allowed_border: 0
+                assigner:
+                    ignore_iof_thr: -1
+                    match_low_quality: true
+                    min_pos_iou: 0.3
+                    neg_iou_thr: 0.3
+                    pos_iou_thr: 0.7
+                    type: MaxIoUAssigner
+                debug: false
+                pos_weight: -1
+                sampler:
+                    add_gt_as_proposals: false
+                    neg_pos_ub: -1
+                    num: 256
+                    pos_fraction: 0.5
+                    type: RandomSampler
+            rpn_proposal:
+                max_per_img: 2000
+                min_bbox_size: 0
+                nms:
+                    iou_threshold: 0.7
+                    type: nms
+                nms_pre: 2000
+        type: CascadeRCNN
+num_classes:
+    value: 1
+num_epochs:
+    value: 20
+num_workers:
+    value: 6
+optim_wrapper:
+    value:
+        optimizer:
+            lr: 0.005
+            momentum: 0.9
+            type: SGD
+            weight_decay: 0.0001
+        type: OptimWrapper
+param_scheduler:
+    value:
+        - begin: 0
+          by_epoch: true
+          end: 4
+          start_factor: 0.001
+          type: LinearLR
+        - begin: 4
+          by_epoch: true
+          end: 20
+          gamma: 0.1
+          milestones:
+            - 3
+            - 4
+          type: MultiStepLR
+resume:
+    value: false
+seed:
+    value: 42
+test_cfg:
+    value:
+        type: TestLoop
+test_dataloader:
+    value:
+        batch_size: 8
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                  type: PackDetInputs
+            test_mode: true
+            type: CocoDataset
+        drop_last: false
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: false
+            type: DefaultSampler
+test_evaluator:
+    value:
+        ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test_coco.json
+        backend_args: null
+        format_only: true
+        outfile_prefix: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test/images
+        type: CocoMetric
+test_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - keep_empty: false
+          min_gt_bbox_wh:
+            - 16
+            - 16
+          type: FilterAnnotations
+        - keep_ratio: true
+          scale:
+            - 1280
+            - 1280
+          type: Resize
+        - meta_keys:
+            - img_id
+            - img_path
+            - ori_shape
+            - img_shape
+            - scale_factor
+          type: PackDetInputs
+train_cfg:
+    value:
+        max_epochs: 20
+        type: EpochBasedTrainLoop
+        val_interval: 1
+train_dataloader:
+    value:
+        batch_sampler:
+            type: AspectRatioBatchSampler
+        batch_size: 8
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/train_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/train/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            filter_cfg:
+                filter_empty_gt: true
+                min_size: 32
+            metainfo:
+                classes:
+                    - cow
+                palette:
+                    - - 220
+                      - 20
+                      - 60
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - prob: 0.5
+                  type: RandomFlip
+                - level: 2
+                  prob: 0.3
+                  type: Rotate
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - type: PackDetInputs
+            type: CocoDataset
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: true
+            type: DefaultSampler
+train_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - prob: 0.5
+          type: RandomFlip
+        - level: 2
+          prob: 0.3
+          type: Rotate
+        - keep_empty: false
+          min_gt_bbox_wh:
+            - 16
+            - 16
+          type: FilterAnnotations
+        - keep_ratio: true
+          scale:
+            - 1280
+            - 1280
+          type: Resize
+        - type: PackDetInputs
+val_cfg:
+    value:
+        type: ValLoop
+val_dataloader:
+    value:
+        batch_size: 8
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/valid_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/valid/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            metainfo:
+                classes:
+                    - cow
+                palette:
+                    - - 220
+                      - 20
+                      - 60
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                  type: PackDetInputs
+            test_mode: true
+            type: CocoDataset
+        drop_last: false
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: false
+            type: DefaultSampler
+val_evaluator:
+    value:
+        ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch//valid_coco.json
+        backend_args: null
+        format_only: false
+        metric: bbox
+        type: CocoMetric
+vis_backends:
+    value:
+        - init_kwargs:
+            group: 2stage
+            name: cascade_rcnn_r50_20e_b8_warm-up
+            project: Сomparison of detectors
+          type: WandbVisBackend
+visualizer:
+    value:
+        name: visualizer
+        type: Visualizer
+        vis_backends:
+            - init_kwargs:
+                group: 2stage
+                name: cascade_rcnn_r50_20e_b8_warm-up
+                project: Сomparison of detectors
+              type: WandbVisBackend
+weights:
+    value: cascade_rcnn_r50_fpn_20e_coco_bbox_mAP-0.41_20200504_175131-e9872a90.pth
+work_dir:
+    value: /home/jaa/Work/Prog/BSU/Detectors/work_dirs/cascade_rcnn/cascade_rcnn_r50_20e_8b_warm-up_custom/

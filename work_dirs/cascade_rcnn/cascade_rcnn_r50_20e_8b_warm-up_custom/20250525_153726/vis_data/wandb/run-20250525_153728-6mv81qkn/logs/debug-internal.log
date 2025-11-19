@@ -1,0 +1,15 @@
+{"time":"2025-05-25T15:37:28.495852677+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/cascade_rcnn/cascade_rcnn_r50_20e_8b_warm-up_custom/20250525_153726/vis_data/wandb/run-20250525_153728-6mv81qkn/logs/debug-core.log"}
+{"time":"2025-05-25T15:37:28.945816583+04:00","level":"INFO","msg":"created new stream","id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:28.945849164+04:00","level":"INFO","msg":"stream: started","id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:28.945894028+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:28.945903726+04:00","level":"INFO","msg":"handler: started","stream_id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:28.945915107+04:00","level":"INFO","msg":"sender: started","stream_id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:29.314155839+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-25T15:37:32.849004642+04:00","level":"INFO","msg":"stream: closing","id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:32.84902528+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-25T15:37:32.849064083+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-25T15:37:34.008898135+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-25T15:37:34.435222449+04:00","level":"INFO","msg":"handler: closed","stream_id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:34.435269737+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:34.435279776+04:00","level":"INFO","msg":"sender: closed","stream_id":"6mv81qkn"}
+{"time":"2025-05-25T15:37:34.435336923+04:00","level":"INFO","msg":"stream: closed","id":"6mv81qkn"}

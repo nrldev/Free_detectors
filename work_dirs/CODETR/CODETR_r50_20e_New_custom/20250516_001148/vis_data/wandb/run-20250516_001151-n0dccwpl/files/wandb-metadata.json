@@ -1,0 +1,45 @@
+{
+  "os": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.11.11",
+  "startedAt": "2025-05-15T20:11:51.162641Z",
+  "args": [
+    "../configs/CODETR/co-detr_r50_1x_custom.py"
+  ],
+  "program": "/home/jaa/Work/Prog/BSU/Detectors/mmdetection/./tools/train.py",
+  "codePath": "tools/train.py",
+  "git": {
+    "remote": "https://github.com/open-mmlab/mmdetection.git",
+    "commit": "4f6eb1680df8ccc92404942ffc7d5d7f6cca4ed4"
+  },
+  "email": "jigaloff@gmail.com",
+  "root": "/home/jaa/Work/Prog/BSU/Detectors/work_dirs/CODETR/CODETR_r50_20e_New_custom/20250516_001148/vis_data",
+  "host": "jaa-Desktop",
+  "executable": "/home/jaa/miniconda3/envs/detectors/bin/python",
+  "codePathLocal": "tools/train.py",
+  "cpu_count": 12,
+  "cpu_count_logical": 24,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1966736678912",
+      "used": "1494034563072"
+    }
+  },
+  "memory": {
+    "total": "64940695552"
+  },
+  "cpu": {
+    "count": 12,
+    "countLogical": 24
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4090",
+      "memoryTotal": "25757220864",
+      "cudaCores": 16384,
+      "architecture": "Ada"
+    }
+  ],
+  "cudaVersion": "12.8"
+}

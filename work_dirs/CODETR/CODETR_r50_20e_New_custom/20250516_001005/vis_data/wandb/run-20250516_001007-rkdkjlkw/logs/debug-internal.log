@@ -1,0 +1,16 @@
+{"time":"2025-05-16T00:10:07.278921797+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/CODETR/CODETR_r50_20e_New_custom/20250516_001005/vis_data/wandb/run-20250516_001007-rkdkjlkw/logs/debug-core.log"}
+{"time":"2025-05-16T00:10:07.678568649+04:00","level":"INFO","msg":"created new stream","id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:07.678603054+04:00","level":"INFO","msg":"stream: started","id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:07.678620597+04:00","level":"INFO","msg":"sender: started","stream_id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:07.67862247+04:00","level":"INFO","msg":"handler: started","stream_id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:07.678899208+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:07.983454305+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-16T00:10:13.422105195+04:00","level":"INFO","msg":"stream: closing","id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:13.422131544+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-16T00:10:13.422209961+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-16T00:10:40.572560154+04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-05-16T00:10:46.743431503+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-16T00:10:47.084792165+04:00","level":"INFO","msg":"handler: closed","stream_id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:47.084841647+04:00","level":"INFO","msg":"sender: closed","stream_id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:47.084841737+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rkdkjlkw"}
+{"time":"2025-05-16T00:10:47.084902571+04:00","level":"INFO","msg":"stream: closed","id":"rkdkjlkw"}

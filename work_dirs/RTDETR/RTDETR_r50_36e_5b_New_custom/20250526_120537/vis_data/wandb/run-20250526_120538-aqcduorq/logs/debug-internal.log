@@ -1,0 +1,16 @@
+{"time":"2025-05-26T12:05:38.758956388+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTDETR/RTDETR_r50_36e_5b_New_custom/20250526_120537/vis_data/wandb/run-20250526_120538-aqcduorq/logs/debug-core.log"}
+{"time":"2025-05-26T12:05:39.152366488+04:00","level":"INFO","msg":"created new stream","id":"aqcduorq"}
+{"time":"2025-05-26T12:05:39.15240518+04:00","level":"INFO","msg":"stream: started","id":"aqcduorq"}
+{"time":"2025-05-26T12:05:39.152427182+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"aqcduorq"}
+{"time":"2025-05-26T12:05:39.152448371+04:00","level":"INFO","msg":"sender: started","stream_id":"aqcduorq"}
+{"time":"2025-05-26T12:05:39.152431239+04:00","level":"INFO","msg":"handler: started","stream_id":"aqcduorq"}
+{"time":"2025-05-26T12:05:39.477104161+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-26T12:05:58.40762934+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-26T12:05:58.407665258+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-26T12:05:59.324475949+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-26T12:05:59.408991318+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 110-112","runtime_seconds":0.084417766}],"total_operations":1}}
+{"time":"2025-05-26T12:05:59.653579812+04:00","level":"INFO","msg":"stream: closing","id":"aqcduorq"}
+{"time":"2025-05-26T12:05:59.65358961+04:00","level":"INFO","msg":"handler: closed","stream_id":"aqcduorq"}
+{"time":"2025-05-26T12:05:59.653597455+04:00","level":"INFO","msg":"sender: closed","stream_id":"aqcduorq"}
+{"time":"2025-05-26T12:05:59.653595592+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"aqcduorq"}
+{"time":"2025-05-26T12:05:59.653648881+04:00","level":"INFO","msg":"stream: closed","id":"aqcduorq"}

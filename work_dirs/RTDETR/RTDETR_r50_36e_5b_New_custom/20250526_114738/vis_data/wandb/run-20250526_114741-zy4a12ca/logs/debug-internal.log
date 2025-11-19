@@ -1,0 +1,16 @@
+{"time":"2025-05-26T11:47:41.314341481+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTDETR/RTDETR_r50_36e_5b_New_custom/20250526_114738/vis_data/wandb/run-20250526_114741-zy4a12ca/logs/debug-core.log"}
+{"time":"2025-05-26T11:47:41.703862599+04:00","level":"INFO","msg":"created new stream","id":"zy4a12ca"}
+{"time":"2025-05-26T11:47:41.703897113+04:00","level":"INFO","msg":"stream: started","id":"zy4a12ca"}
+{"time":"2025-05-26T11:47:41.703908534+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"zy4a12ca"}
+{"time":"2025-05-26T11:47:41.703932429+04:00","level":"INFO","msg":"sender: started","stream_id":"zy4a12ca"}
+{"time":"2025-05-26T11:47:41.703959079+04:00","level":"INFO","msg":"handler: started","stream_id":"zy4a12ca"}
+{"time":"2025-05-26T11:47:41.96855234+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-26T11:48:17.09809391+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-26T11:48:17.098170763+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-26T11:48:18.025983258+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-26T11:48:18.063527667+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 111-112","runtime_seconds":0.037439052}],"total_operations":1}}
+{"time":"2025-05-26T11:48:18.368094055+04:00","level":"INFO","msg":"stream: closing","id":"zy4a12ca"}
+{"time":"2025-05-26T11:48:18.368106929+04:00","level":"INFO","msg":"handler: closed","stream_id":"zy4a12ca"}
+{"time":"2025-05-26T11:48:18.368116657+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zy4a12ca"}
+{"time":"2025-05-26T11:48:18.368124712+04:00","level":"INFO","msg":"sender: closed","stream_id":"zy4a12ca"}
+{"time":"2025-05-26T11:48:18.36816602+04:00","level":"INFO","msg":"stream: closed","id":"zy4a12ca"}

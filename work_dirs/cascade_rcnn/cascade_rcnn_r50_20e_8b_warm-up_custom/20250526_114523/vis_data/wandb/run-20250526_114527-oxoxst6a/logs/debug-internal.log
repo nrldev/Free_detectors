@@ -1,0 +1,16 @@
+{"time":"2025-05-26T11:45:27.059287002+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/cascade_rcnn/cascade_rcnn_r50_20e_8b_warm-up_custom/20250526_114523/vis_data/wandb/run-20250526_114527-oxoxst6a/logs/debug-core.log"}
+{"time":"2025-05-26T11:45:27.464395811+04:00","level":"INFO","msg":"created new stream","id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:27.464453769+04:00","level":"INFO","msg":"stream: started","id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:27.464467254+04:00","level":"INFO","msg":"handler: started","stream_id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:27.464483865+04:00","level":"INFO","msg":"sender: started","stream_id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:27.464514543+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:27.760537169+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-26T11:45:52.305044576+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-26T11:45:52.305125637+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-26T11:45:53.269521223+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.40112113,"progress":"18.4KB/18.4KB"}],"total_operations":1}}
+{"time":"2025-05-26T11:45:53.671342703+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-26T11:45:54.107510378+04:00","level":"INFO","msg":"stream: closing","id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:54.107519846+04:00","level":"INFO","msg":"handler: closed","stream_id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:54.107524795+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:54.107528793+04:00","level":"INFO","msg":"sender: closed","stream_id":"oxoxst6a"}
+{"time":"2025-05-26T11:45:54.107563267+04:00","level":"INFO","msg":"stream: closed","id":"oxoxst6a"}

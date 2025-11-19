@@ -1,0 +1,48 @@
+
+train_dataloader:
+  dataset:
+    transforms:
+      ops:
+        - {type: RandomHorizontalFlip, p: 0.5} # Эквивалент RandomFlip
+        - {type: RandomRotation, degrees: 10, p: 0.3} # Эквивалент Rotate, level=2 соответствует углу до 10°
+        - {type: SanitizeBoundingBoxes, min_size: 16} # Эквивалент FilterAnnotations, min_gt_bbox_wh=(16, 16)
+        - {type: Resize, size: [1280, 1280]} # Эквивалент Resize с сохранением соотношения
+        - {type: ConvertPILImage, dtype: 'float32', scale: True} # Преобразование изображения
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True} # Формат боксов
+      policy:
+        name: stop_epoch
+        epoch: 72 # epoch in [71, ~) stop `ops`
+        ops: [] #['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
+
+  collate_fn:
+    type: BatchImageCollateFunction
+    base_size: 1280
+    base_size_repeat: 3
+    stop_epoch: 72 # epoch in [72, ~) stop `multiscales`
+
+  shuffle: True
+  total_batch_size: 5 # total batch size equals to 32 (4 * 8)
+  num_workers: 4
+
+
+val_dataloader:
+  dataset:
+    transforms:
+      ops:
+        - { type: SanitizeBoundingBoxes, min_size: 16 }
+        - {type: Resize, size: [1280, 1280], }
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+  shuffle: False
+  total_batch_size: 5
+  num_workers: 4
+
+test_dataloader:
+  dataset:
+    transforms:
+      ops:
+        - { type: SanitizeBoundingBoxes, min_size: 16 }
+        - {type: Resize, size: [1280, 1280], }
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+  shuffle: False
+  total_batch_size: 5
+  num_workers: 4

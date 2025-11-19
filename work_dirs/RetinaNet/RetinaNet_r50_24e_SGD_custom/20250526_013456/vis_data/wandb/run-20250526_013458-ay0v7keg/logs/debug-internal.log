@@ -1,0 +1,16 @@
+{"time":"2025-05-26T01:34:58.144856962+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RetinaNet/RetinaNet_r50_24e_SGD_custom/20250526_013456/vis_data/wandb/run-20250526_013458-ay0v7keg/logs/debug-core.log"}
+{"time":"2025-05-26T01:34:58.574516662+04:00","level":"INFO","msg":"created new stream","id":"ay0v7keg"}
+{"time":"2025-05-26T01:34:58.57454806+04:00","level":"INFO","msg":"stream: started","id":"ay0v7keg"}
+{"time":"2025-05-26T01:34:58.574560814+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"ay0v7keg"}
+{"time":"2025-05-26T01:34:58.574593105+04:00","level":"INFO","msg":"handler: started","stream_id":"ay0v7keg"}
+{"time":"2025-05-26T01:34:58.574570492+04:00","level":"INFO","msg":"sender: started","stream_id":"ay0v7keg"}
+{"time":"2025-05-26T01:34:58.859718605+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-26T01:35:15.250286815+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-26T01:35:15.250366975+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-26T01:35:16.184702701+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-26T01:35:16.251538793+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 105-106","runtime_seconds":0.066723952}],"total_operations":1}}
+{"time":"2025-05-26T01:35:16.58384233+04:00","level":"INFO","msg":"stream: closing","id":"ay0v7keg"}
+{"time":"2025-05-26T01:35:16.583853772+04:00","level":"INFO","msg":"handler: closed","stream_id":"ay0v7keg"}
+{"time":"2025-05-26T01:35:16.583859703+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ay0v7keg"}
+{"time":"2025-05-26T01:35:16.583864492+04:00","level":"INFO","msg":"sender: closed","stream_id":"ay0v7keg"}
+{"time":"2025-05-26T01:35:16.5839007+04:00","level":"INFO","msg":"stream: closed","id":"ay0v7keg"}

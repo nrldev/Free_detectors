@@ -1,0 +1,15 @@
+{"time":"2025-05-12T18:49:03.640688265+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTMDet/RTMDet_m_30e_new1_custom/20250512_184901/vis_data/wandb/run-20250512_184903-c1gbtcxm/logs/debug-core.log"}
+{"time":"2025-05-12T18:49:04.064823637+04:00","level":"INFO","msg":"created new stream","id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:04.064863291+04:00","level":"INFO","msg":"stream: started","id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:04.064896494+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:04.064907945+04:00","level":"INFO","msg":"sender: started","stream_id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:04.064904218+04:00","level":"INFO","msg":"handler: started","stream_id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:04.389499591+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-12T18:49:06.890009456+04:00","level":"INFO","msg":"stream: closing","id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:06.890040625+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-12T18:49:06.890177962+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-12T18:49:15.940955779+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-12T18:49:16.43581278+04:00","level":"INFO","msg":"handler: closed","stream_id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:16.435861161+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:16.435880166+04:00","level":"INFO","msg":"sender: closed","stream_id":"c1gbtcxm"}
+{"time":"2025-05-12T18:49:16.435902117+04:00","level":"INFO","msg":"stream: closed","id":"c1gbtcxm"}

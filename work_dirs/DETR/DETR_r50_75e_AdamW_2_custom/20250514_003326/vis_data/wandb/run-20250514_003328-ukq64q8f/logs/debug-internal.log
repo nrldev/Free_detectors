@@ -1,0 +1,16 @@
+{"time":"2025-05-14T00:33:28.225839947+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/DETR/DETR_r50_75e_AdamW_2_custom/20250514_003326/vis_data/wandb/run-20250514_003328-ukq64q8f/logs/debug-core.log"}
+{"time":"2025-05-14T00:33:28.658511818+04:00","level":"INFO","msg":"created new stream","id":"ukq64q8f"}
+{"time":"2025-05-14T00:33:28.658546133+04:00","level":"INFO","msg":"stream: started","id":"ukq64q8f"}
+{"time":"2025-05-14T00:33:28.658559678+04:00","level":"INFO","msg":"handler: started","stream_id":"ukq64q8f"}
+{"time":"2025-05-14T00:33:28.658573153+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"ukq64q8f"}
+{"time":"2025-05-14T00:33:28.658558275+04:00","level":"INFO","msg":"sender: started","stream_id":"ukq64q8f"}
+{"time":"2025-05-14T00:33:28.984119816+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-14T03:04:10.861979037+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-14T03:04:10.862033088+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-14T03:04:11.863223483+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.51564558,"progress":"272.0KB/333.2KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.515637595,"progress":"1.0KB/1.0KB"},{"desc":"uploading config.yaml","runtime_seconds":0.283368099,"progress":"13.7KB/13.7KB"}],"total_operations":3}}
+{"time":"2025-05-14T03:04:13.312781466+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-14T03:04:13.682089547+04:00","level":"INFO","msg":"stream: closing","id":"ukq64q8f"}
+{"time":"2025-05-14T03:04:13.682099495+04:00","level":"INFO","msg":"handler: closed","stream_id":"ukq64q8f"}
+{"time":"2025-05-14T03:04:13.682107009+04:00","level":"INFO","msg":"sender: closed","stream_id":"ukq64q8f"}
+{"time":"2025-05-14T03:04:13.682105146+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ukq64q8f"}
+{"time":"2025-05-14T03:04:13.682158115+04:00","level":"INFO","msg":"stream: closed","id":"ukq64q8f"}

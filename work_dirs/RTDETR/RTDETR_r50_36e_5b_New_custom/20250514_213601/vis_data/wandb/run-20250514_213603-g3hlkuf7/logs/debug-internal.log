@@ -1,0 +1,18 @@
+{"time":"2025-05-14T21:36:03.526150858+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTDETR/RTDETR_r50_36e_5b_New_custom/20250514_213601/vis_data/wandb/run-20250514_213603-g3hlkuf7/logs/debug-core.log"}
+{"time":"2025-05-14T21:36:03.96529584+04:00","level":"INFO","msg":"created new stream","id":"g3hlkuf7"}
+{"time":"2025-05-14T21:36:03.965317521+04:00","level":"INFO","msg":"stream: started","id":"g3hlkuf7"}
+{"time":"2025-05-14T21:36:03.965333862+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"g3hlkuf7"}
+{"time":"2025-05-14T21:36:03.965387803+04:00","level":"INFO","msg":"sender: started","stream_id":"g3hlkuf7"}
+{"time":"2025-05-14T21:36:03.965409633+04:00","level":"INFO","msg":"handler: started","stream_id":"g3hlkuf7"}
+{"time":"2025-05-14T21:36:04.33462008+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-15T00:17:34.449662334+04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-05-15T04:24:20.364497567+04:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.10.170:39844->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-05-15T04:45:06.512065705+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-15T04:45:06.512095751+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-15T04:45:07.513460842+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading wandb-summary.json","runtime_seconds":0.480583026,"progress":"1.8KB/1.8KB"},{"desc":"uploading output.log","runtime_seconds":0.480564232,"progress":"128.0KB/1.4MB"},{"desc":"uploading history steps 1257-1257, summary, console lines 2773-2798","runtime_seconds":0.336001539},{"desc":"uploading config.yaml","runtime_seconds":0.172609167,"progress":"14.8KB/14.8KB"}],"total_operations":4}}
+{"time":"2025-05-15T04:45:09.460536988+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-15T04:45:09.792075567+04:00","level":"INFO","msg":"stream: closing","id":"g3hlkuf7"}
+{"time":"2025-05-15T04:45:09.792085065+04:00","level":"INFO","msg":"handler: closed","stream_id":"g3hlkuf7"}
+{"time":"2025-05-15T04:45:09.792090345+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"g3hlkuf7"}
+{"time":"2025-05-15T04:45:09.792095454+04:00","level":"INFO","msg":"sender: closed","stream_id":"g3hlkuf7"}
+{"time":"2025-05-15T04:45:09.792118447+04:00","level":"INFO","msg":"stream: closed","id":"g3hlkuf7"}

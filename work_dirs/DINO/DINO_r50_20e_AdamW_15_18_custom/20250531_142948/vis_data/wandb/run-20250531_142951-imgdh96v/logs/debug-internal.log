@@ -1,0 +1,7 @@
+{"time":"2025-05-31T14:29:51.408911119+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_20e_AdamW_15_18_custom/20250531_142948/vis_data/wandb/run-20250531_142951-imgdh96v/logs/debug-core.log"}
+{"time":"2025-05-31T14:29:51.824300345+04:00","level":"INFO","msg":"created new stream","id":"imgdh96v"}
+{"time":"2025-05-31T14:29:51.824492624+04:00","level":"INFO","msg":"stream: started","id":"imgdh96v"}
+{"time":"2025-05-31T14:29:51.824502112+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"imgdh96v"}
+{"time":"2025-05-31T14:29:51.824579086+04:00","level":"INFO","msg":"sender: started","stream_id":"imgdh96v"}
+{"time":"2025-05-31T14:29:51.824582502+04:00","level":"INFO","msg":"handler: started","stream_id":"imgdh96v"}
+{"time":"2025-05-31T14:29:52.091654226+04:00","level":"INFO","msg":"Starting system monitor"}

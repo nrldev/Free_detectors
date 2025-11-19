@@ -1,0 +1,16 @@
+{"time":"2025-05-26T01:34:30.973585465+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/RTDETR/RTDETR_r50_36e_5b_New_custom/20250526_013429/vis_data/wandb/run-20250526_013430-ly0ja5ip/logs/debug-core.log"}
+{"time":"2025-05-26T01:34:31.39856513+04:00","level":"INFO","msg":"created new stream","id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:31.398652744+04:00","level":"INFO","msg":"stream: started","id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:31.398715822+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:31.398795241+04:00","level":"INFO","msg":"sender: started","stream_id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:31.398799979+04:00","level":"INFO","msg":"handler: started","stream_id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:31.703914535+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-26T01:34:49.884869359+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-26T01:34:49.88491248+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-26T01:34:50.720495104+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-26T01:34:50.88625442+04:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 111-112","runtime_seconds":0.165637537}],"total_operations":1}}
+{"time":"2025-05-26T01:34:51.11238983+04:00","level":"INFO","msg":"stream: closing","id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:51.112399037+04:00","level":"INFO","msg":"handler: closed","stream_id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:51.112403706+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:51.112409647+04:00","level":"INFO","msg":"sender: closed","stream_id":"ly0ja5ip"}
+{"time":"2025-05-26T01:34:51.112438992+04:00","level":"INFO","msg":"stream: closed","id":"ly0ja5ip"}

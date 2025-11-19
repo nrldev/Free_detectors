@@ -1,0 +1,517 @@
+_wandb:
+    value:
+        cli_version: 0.19.9
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 37
+                - 38
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 82
+            "2":
+                - 1
+                - 5
+                - 11
+                - 37
+                - 38
+                - 41
+                - 49
+                - 53
+                - 55
+                - 71
+                - 82
+            "3":
+                - 2
+                - 13
+                - 23
+                - 55
+            "4": 3.11.11
+            "5": 0.19.9
+            "6": 4.51.2
+            "8":
+                - 5
+            "12": 0.19.9
+            "13": linux-x86_64
+HOME:
+    value: /home/jaa/Work/Prog/BSU/Detectors
+MODEL_GROUP:
+    value: transformer
+MODEL_TYPE:
+    value: DINO
+WEIGHT_SIZE:
+    value: r50
+additions:
+    value: AdamW_15_18
+auto_scale_lr:
+    value:
+        base_batch_size: 16
+backend_args:
+    value: null
+batch_size:
+    value: 2
+checkpoint_config:
+    value:
+        interval: 1
+data_root:
+    value: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+dataset_type:
+    value: CocoDataset
+default_hooks:
+    value:
+        checkpoint:
+            interval: 1
+            type: CheckpointHook
+        early_stopping:
+            min_delta: 0.001
+            monitor: coco/bbox_mAP
+            patience: 3
+            type: EarlyStoppingHook
+        logger:
+            interval: 50
+            log_metric_by_epoch: true
+            type: LoggerHook
+        param_scheduler:
+            type: ParamSchedulerHook
+        sampler_seed:
+            type: DistSamplerSeedHook
+        timer:
+            type: IterTimerHook
+        visualization:
+            type: DetVisualizationHook
+default_scope:
+    value: mmdet
+deterministic:
+    value: true
+env_cfg:
+    value:
+        cudnn_benchmark: false
+        dist_cfg:
+            backend: nccl
+        mp_cfg:
+            mp_start_method: fork
+            opencv_num_threads: 0
+evaluation:
+    value:
+        interval: 1
+        metric: bbox
+experiment:
+    value: DINO_r50_20e_AdamW_15_18_custom
+launcher:
+    value: none
+load_from:
+    value: /home/jaa/Work/Prog/BSU/Detectors/models/DINO/dino-4scale_r50_improved_8xb2-12e_coco_20230818_162607-6f47a913.pth
+log_level:
+    value: INFO
+log_processor:
+    value:
+        by_epoch: true
+        type: LogProcessor
+        window_size: 50
+max_epochs:
+    value: 12
+metainfo:
+    value:
+        classes:
+            - cow
+        palette:
+            - - 220
+              - 20
+              - 60
+model:
+    value:
+        as_two_stage: true
+        backbone:
+            depth: 50
+            frozen_stages: -1
+            init_cfg:
+                checkpoint: torchvision://resnet50
+                type: Pretrained
+            norm_cfg:
+                requires_grad: false
+                type: BN
+            norm_eval: true
+            num_stages: 4
+            out_indices:
+                - 1
+                - 2
+                - 3
+            style: pytorch
+            type: ResNet
+        bbox_head:
+            loss_bbox:
+                loss_weight: 5
+                type: L1Loss
+            loss_cls:
+                alpha: 0.25
+                gamma: 2
+                loss_weight: 2
+                type: FocalLoss
+                use_sigmoid: true
+            loss_iou:
+                loss_weight: 2
+                type: GIoULoss
+            num_classes: 1
+            sync_cls_avg_factor: true
+            type: DINOHead
+        data_preprocessor:
+            bgr_to_rgb: true
+            mean:
+                - 123.675
+                - 116.28
+                - 103.53
+            pad_size_divisor: 1
+            std:
+                - 58.395
+                - 57.12
+                - 57.375
+            type: DetDataPreprocessor
+        decoder:
+            layer_cfg:
+                cross_attn_cfg:
+                    dropout: 0
+                    embed_dims: 256
+                    num_levels: 4
+                ffn_cfg:
+                    embed_dims: 256
+                    feedforward_channels: 2048
+                    ffn_drop: 0
+                self_attn_cfg:
+                    dropout: 0
+                    embed_dims: 256
+                    num_heads: 8
+            num_layers: 6
+            post_norm_cfg: null
+            return_intermediate: true
+        dn_cfg:
+            box_noise_scale: 1
+            group_cfg:
+                dynamic: true
+                num_dn_queries: 300
+                num_groups: null
+            label_noise_scale: 0.5
+        encoder:
+            layer_cfg:
+                ffn_cfg:
+                    embed_dims: 256
+                    feedforward_channels: 2048
+                    ffn_drop: 0
+                self_attn_cfg:
+                    dropout: 0
+                    embed_dims: 256
+                    num_levels: 4
+            num_layers: 6
+        neck:
+            act_cfg: null
+            in_channels:
+                - 512
+                - 1024
+                - 2048
+            kernel_size: 1
+            norm_cfg:
+                num_groups: 32
+                type: GN
+            num_outs: 4
+            out_channels: 256
+            type: ChannelMapper
+        num_queries: 900
+        positional_encoding:
+            normalize: true
+            num_feats: 128
+            offset: -0.5
+            temperature: 10000
+        test_cfg:
+            max_per_img: 300
+        train_cfg:
+            assigner:
+                match_costs:
+                    - type: FocalLossCost
+                      weight: 2
+                    - box_format: xywh
+                      type: BBoxL1Cost
+                      weight: 5
+                    - iou_mode: giou
+                      type: IoUCost
+                      weight: 2
+                type: HungarianAssigner
+        type: DINO
+        with_box_refine: true
+num_classes:
+    value: 1
+num_epochs:
+    value: 20
+num_workers:
+    value: 6
+optim_wrapper:
+    value:
+        accumulative_counts: 2
+        clip_grad:
+            max_norm: 0.1
+            norm_type: 2
+        optimizer:
+            betas:
+                - 0.9
+                - 0.999
+            lr: 0.001
+            type: AdamW
+            weight_decay: 0.05
+        paramwise_cfg:
+            custom_keys:
+                backbone:
+                    lr_mult: 0.1
+                reference_points:
+                    lr_mult: 0.1
+                sampling_offsets:
+                    lr_mult: 0.1
+        type: OptimWrapper
+param_scheduler:
+    value:
+        - begin: 0
+          by_epoch: true
+          end: 1
+          start_factor: 0.001
+          type: LinearLR
+        - begin: 1
+          by_epoch: true
+          end: 20
+          gamma: 0.1
+          milestones:
+            - 15
+            - 18
+          type: MultiStepLR
+resume:
+    value: false
+seed:
+    value: 42
+test_cfg:
+    value:
+        type: TestLoop
+test_dataloader:
+    value:
+        batch_size: 2
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                  type: PackDetInputs
+            test_mode: true
+            type: CocoDataset
+        drop_last: false
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: false
+            type: DefaultSampler
+test_evaluator:
+    value:
+        ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test_coco.json
+        backend_args: null
+        format_only: true
+        metric: bbox
+        outfile_prefix: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/test/images
+        type: CocoMetric
+test_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - keep_empty: false
+          min_gt_bbox_wh:
+            - 16
+            - 16
+          type: FilterAnnotations
+        - keep_ratio: true
+          scale:
+            - 1280
+            - 1280
+          type: Resize
+        - meta_keys:
+            - img_id
+            - img_path
+            - ori_shape
+            - img_shape
+            - scale_factor
+          type: PackDetInputs
+train_cfg:
+    value:
+        max_epochs: 20
+        type: EpochBasedTrainLoop
+        val_interval: 1
+train_dataloader:
+    value:
+        batch_sampler:
+            type: AspectRatioBatchSampler
+        batch_size: 2
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/train_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/train/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            filter_cfg:
+                filter_empty_gt: false
+                min_size: 32
+            metainfo:
+                classes:
+                    - cow
+                palette:
+                    - - 220
+                      - 20
+                      - 60
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - prob: 0.5
+                  type: RandomFlip
+                - level: 2
+                  prob: 0.3
+                  type: Rotate
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - type: PackDetInputs
+            type: CocoDataset
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: true
+            type: DefaultSampler
+train_pipeline:
+    value:
+        - backend_args: null
+          type: LoadImageFromFile
+        - type: LoadAnnotations
+          with_bbox: true
+        - prob: 0.5
+          type: RandomFlip
+        - level: 2
+          prob: 0.3
+          type: Rotate
+        - keep_empty: false
+          min_gt_bbox_wh:
+            - 16
+            - 16
+          type: FilterAnnotations
+        - keep_ratio: true
+          scale:
+            - 1280
+            - 1280
+          type: Resize
+        - type: PackDetInputs
+val_cfg:
+    value:
+        type: ValLoop
+val_dataloader:
+    value:
+        batch_size: 2
+        dataset:
+            ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/valid_coco.json
+            backend_args: null
+            data_prefix:
+                img: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/valid/images
+            data_root: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch/
+            metainfo:
+                classes:
+                    - cow
+                palette:
+                    - - 220
+                      - 20
+                      - 60
+            pipeline:
+                - backend_args: null
+                  type: LoadImageFromFile
+                - type: LoadAnnotations
+                  with_bbox: true
+                - keep_empty: false
+                  min_gt_bbox_wh:
+                    - 16
+                    - 16
+                  type: FilterAnnotations
+                - keep_ratio: true
+                  scale:
+                    - 1280
+                    - 1280
+                  type: Resize
+                - meta_keys:
+                    - img_id
+                    - img_path
+                    - ori_shape
+                    - img_shape
+                    - scale_factor
+                  type: PackDetInputs
+            test_mode: true
+            type: CocoDataset
+        drop_last: false
+        num_workers: 6
+        persistent_workers: true
+        sampler:
+            shuffle: false
+            type: DefaultSampler
+val_evaluator:
+    value:
+        ann_file: /home/jaa/Work/Prog/BSU/Detectors/mmdetection/data/Padded_GroundingDINO.v1i.yolov5pytorch//valid_coco.json
+        backend_args: null
+        format_only: false
+        metric: bbox
+        type: CocoMetric
+vis_backends:
+    value:
+        - init_kwargs:
+            group: transformer
+            name: DINO_r50_20e_b2_AdamW_15_18
+            project: Сomparison of detectors
+          type: WandbVisBackend
+visualizer:
+    value:
+        name: visualizer
+        type: Visualizer
+        vis_backends:
+            - init_kwargs:
+                group: transformer
+                name: DINO_r50_20e_b2_AdamW_15_18
+                project: Сomparison of detectors
+              type: WandbVisBackend
+weights:
+    value: dino-4scale_r50_improved_8xb2-12e_coco_20230818_162607-6f47a913.pth
+work_dir:
+    value: /home/jaa/Work/Prog/BSU/Detectors/work_dirs/DINO/DINO_r50_20e_AdamW_15_18_custom/

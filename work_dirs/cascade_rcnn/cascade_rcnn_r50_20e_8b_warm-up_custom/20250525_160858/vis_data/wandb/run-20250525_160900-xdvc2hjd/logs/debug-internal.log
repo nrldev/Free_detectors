@@ -1,0 +1,15 @@
+{"time":"2025-05-25T16:09:00.780477047+04:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"/home/jaa/Work/Prog/BSU/Detectors/work_dirs/cascade_rcnn/cascade_rcnn_r50_20e_8b_warm-up_custom/20250525_160858/vis_data/wandb/run-20250525_160900-xdvc2hjd/logs/debug-core.log"}
+{"time":"2025-05-25T16:09:01.178991523+04:00","level":"INFO","msg":"created new stream","id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:01.179027179+04:00","level":"INFO","msg":"stream: started","id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:01.179045313+04:00","level":"INFO","msg":"writer: Do: started","stream_id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:01.179050473+04:00","level":"INFO","msg":"sender: started","stream_id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:01.179055412+04:00","level":"INFO","msg":"handler: started","stream_id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:01.520693874+04:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-25T16:09:05.048854393+04:00","level":"INFO","msg":"stream: closing","id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:05.048877616+04:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-25T16:09:05.048959869+04:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-25T16:09:06.090303626+04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-25T16:09:06.449829152+04:00","level":"INFO","msg":"handler: closed","stream_id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:06.449882211+04:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:06.449893512+04:00","level":"INFO","msg":"sender: closed","stream_id":"xdvc2hjd"}
+{"time":"2025-05-25T16:09:06.449953163+04:00","level":"INFO","msg":"stream: closed","id":"xdvc2hjd"}
